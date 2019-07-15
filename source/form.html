@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи - Подбор программы</title>
-  </head>
-  <body>
-    <header class="page-header">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи - Подбор программы</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <a href="index.html">
       <img class="page-header__logo-image" src="https//placeholder.it/40x40" width="40" height="40"
-        alt="Логотип магазина">
-      <h1 class="page-header__name">CAT ENERGY</h1>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a href="index.html">Главная</a></li>
-          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="site-list__item"><a>Подбор программы</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="form-page">
-      <h1 class="form-page__title">Подбор программы</h1>
-      <b class="form-page__description">Заполните анкету и мы подберем программу питания
-        для вашего кота
-      </b>
-      <form action="https://echo.htmlacademy.ru" method="post">
+        alt="Логотип магазина"></a>
+    <b class="page-header__name">CAT ENERGY</b>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть</button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item"><a href="index.html">Главная</a></li>
+        <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+        <li class="site-list__item"><a>Подбор программы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="form-page">
+    <h1 class="form-page__title">Подбор программы</h1>
+    <b class="form-page__description">Заполните анкету и мы подберем программу питания
+      для вашего кота
+    </b>
+    <form action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="form-page__about-cat">
         <label>
-          Имя:<sup>*</sup><input class="form-page__about-cat--name" type="text" placeholder="Барсик">
+          Имя:<sup>*</sup><input class="form-page__about-cat--name" type="text" placeholder="Барсик" required>
         </label>
         <label>
-          Вес (кг):<sup>*</sup> <input class="form-page__about-cat--weight" type="number" placeholder="7">
+          Вес (кг):<sup>*</sup> <input class="form-page__about-cat--weight" type="number" placeholder="7" required>
         </label>
         <label>
           Возраст (лет) <input class="form-page__about-cat--age" type="number" placeholder="7">
@@ -37,24 +40,24 @@
       </fieldset>
       <fieldset class="form-page__purpose">
         <label>
-          <input type="radio" name="loss-weight" value="loss-weight" checked> Похудение
+          <input type="radio" name="purpose" value="loss-weight" checked> Похудение
         </label>
         <label>
-          <input type="radio" name="gain-weight" value="gain-weight"> Набор массы
+          <input type="radio" name="purpose" value="gain-weight"> Набор массы
         </label>
         <label>
-          <input type="radio" name="dont-know" value="dont-know">Не знаю (нужен ваш совет)
+          <input type="radio" name="purpose" value="dont-know">Не знаю (нужен ваш совет)
         </label>
       </fieldset>
       <fieldset class="form-page__about-owner">
         <legend>Контактные данные (владельца кота)</legend>
         <label>
           E-mail: <sup>*</sup><input class="form-page__about-owner--email" type="email"
-          placeholder="kuklachev@gmail.com">
+            placeholder="kuklachev@gmail.com" required>
         </label>
         <label>
-          Телефон:<sup>*</sup><input class="form-page__about-owner--tel" type="tel"
-          placeholder="8 (960) 900-60-90">
+          Телефон:<sup>*</sup><input class="form-page__about-owner--tel" type="tel" placeholder="8 (960) 900-60-90"
+            required>
         </label>
       </fieldset>
       <fieldset class="form-page__comment">
@@ -64,48 +67,50 @@
       <fieldset class="form-page__add">
         <legend>Дополнительно</legend>
         <label>
-          <input type="checkbox" name="sugarfree" value="sugarfree" checked> Сахарозаменитель
+          <input type="checkbox" name="addition" value="sugarfree" checked> Сахарозаменитель
         </label>
         <label>
-          <input type="checkbox" name="water" value="water">Питьевая вода
+          <input type="checkbox" name="addition" value="water">Питьевая вода
         </label>
         <label>
-          <input type="checkbox" name="milk" value="milk">Молоко
+          <input type="checkbox" name="addition" value="milk">Молоко
         </label>
         <label>
-          <input type="checkbox" name="vitamin" value="vitamin">Витамины
+          <input type="checkbox" name="addition" value="vitamin">Витамины
         </label>
       </fieldset>
-      <input type="submit" value="Отправить заявку">
-      </form>
-      <small><sup>*</sup>Обязательные поля</small>
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <h3 class="contacts__cooperation">Приглашаем к сотрудничеству диллеров!</h3>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <iframe class="contacts__map" src="map.html" width="320" height="365"></iframe>
-      </section>
-    </main>
-    <footer class="page-footer">
-      <a class="page-footer__name" href="index.html">CAT ENERGY</a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="https://vk.com/catenergy">Вконтакт</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/catenergy">
-            Инстаграм</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/catenergy">
-            Фейсбук</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright">
-        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </div>
-    </footer>
-  </body>
+      <button type="submit">Отправить заявку</button>
+    </form>
+    <small><sup>*</sup>Обязательные поля</small>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <h3 class="contacts__cooperation">Приглашаем к сотрудничеству диллеров!</h3>
+      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <iframe class="contacts__map" src="map.html" width="320" height="365"></iframe>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <a class="page-footer__name" href="index.html">CAT ENERGY</a>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/catenergy">
+            <img src="img/vk.svg" width="22" height="12" alt="vkontakte">Вконтакт</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/catenergy">
+            <img src="img/inst.svg" width="22" height="12" alt="instagram">Инстаграм</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/catenergy">
+            <img src="img/fb.svg" width="22" height="12" alt="facebook">Фейсбук</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright">
+      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
+  </footer>
+</body>
+
 </html>

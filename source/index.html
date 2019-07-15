@@ -11,7 +11,7 @@
   <header class="page-header">
     <img class="page-header__logo-image" src="https//placeholder.it/40x40" width="40" height="40"
       alt="Логотип магазина">
-    <h1 class="page-header__name">CAT ENERGY</h1>
+    <b class="page-header__name">CAT ENERGY</b>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть</button>
       <ul class="main-nav__list site-list">
@@ -30,14 +30,12 @@
     <section class="categories">
       <h2 class="visually-hidden">Каталог программ</h2>
       <a href="form.html" class="categories__button-search">Подобрать программу</a>
-      <img class="categories__icon" src="icon-slim.png" width="56" height="56" alt="Иконка">
-      <h3 class="categories__title">Похудение</h3>
+      <h3 class="categories__title categories__icon--slim">Похудение</h3>
       <p class="categories__text">Ваш кот весит больше собаки и почти утратил способность лазить
         по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
       </p>
       <a href="catalog-slim.html" class="categories__link">Каталог Slim</a>
-      <img class="categories__icon" src="icon-weight.png" width="56" height="56" alt="Иконка">
-      <h3 class="categories__titile">Набор массы</h3>
+      <h3 class="categories__titile categories__icon--weight">Набор массы</h3>
       <p class="categories__text">Заработать авторитет среди дворовых котов и даже собак?
         Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
       </p>
@@ -67,8 +65,10 @@
         обычный корм на Cat Energy Slim. Отличный резульат без изнуряющих тренировок!
         При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
       </p>
-      <div class="example__weight">5 кг снижение веса</div>
-      <div class="example__days">60 дней затрачено времени</div>
+      <div class="example__weight"><span class="example__weight--kilo">5 кг</span>
+        <span class="example__weight--text">снижение веса</span></div>
+      <div class="example__days"><span class="example__days--time">60 дней</span>
+        <span class="example__days--text">затрачено времени</span></div>
       <p class="example__costs">Затраты на питание: 15 000 рублей</p>
       <img class="example__before slider" src="boris-before.jpg" width="280" height="280" alt="Фото Бориса ДО">
       <img class="example__after slider" src="boris-after.jpg" width="280" height="280" alt="Фото Бориса ПОСЛЕ">
@@ -80,7 +80,7 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <h3 class="contacts__cooperation">Приглашаем к сотрудничеству диллеров!</h3>
-      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       <iframe class="contacts__map" src="map.html" width="320" height="365"></iframe>
     </section>
   </main>
@@ -89,15 +89,16 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/catenergy">Вконтакт</a>
+          <a class="social__link social__link--vk" href="https://vk.com/catenergy">Вконтакт
+            <img src="img/vk.svg" width="22" height="12" alt="vkontakte"></a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--instagram" href="https://www.instagram.com/catenergy">
-            Инстаграм</a>
+            <img src="img/inst.svg" width="22" height="12" alt="instagram">Инстаграм</a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/catenergy">
-            Фейсбук</a>
+            <img src="img/fb.svg" width="22" height="12" alt="facebook">Фейсбук</a>
         </li>
       </ul>
     </div>
