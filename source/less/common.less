@@ -49,3 +49,29 @@ a {
 
   background-color: #68b738;
 }
+
+@font-face {
+  font-weight: normal;
+  font-family: "Oswald Regular";
+  font-style: normal;
+  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff")
+  format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Oswald Medium";
+  font-style: normal;
+  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff")
+  format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
