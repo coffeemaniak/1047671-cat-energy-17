@@ -8,7 +8,7 @@ body {
   font-family: "Oswald", "Arial", sans-serif;
   color: black;
 
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 a {
@@ -45,13 +45,13 @@ a {
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  color: white;
+  color: @white;
 
-  background-color: #68b738;
+  background-color: @light-green;
 }
 
 @font-face {
-  font-weight: normal;
+  font-weight: 400;
   font-family: "Oswald Regular";
   font-style: normal;
   src: url("/source/fonts/oswaldregular.woff2") format("woff2"),
@@ -59,7 +59,7 @@ a {
 }
 
 @font-face {
-  font-weight: bold;
+  font-weight: 500;
   font-family: "Oswald Medium";
   font-style: normal;
   src: url("/source/fonts/oswaldmedium.woff2") format("woff2"),
