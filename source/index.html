@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="page-header">
-    <img class="page-header__logo-image" src="https//placeholder.it/40x40" width="40" height="40"
+    <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40"
       alt="Логотип магазина">
-    <img src="https//placeholder.it/101x18" width="101" height="18" alt="Логотип магазина Cat Energy">
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть</button>
+      <button class="main-nav__toggle" type="button"><img src="img/icon-mobile-menu.svg" width="26" height="26"></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item"><a>Главная</a></li>
         <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
@@ -29,17 +29,21 @@
     <img class="page-main__photo" src="logo.png" width="280" height="250" alt="фото продукции">
     <section class="categories">
       <h2 class="visually-hidden">Каталог программ</h2>
-      <a href="form.html" class="categories__button-search">Подобрать программу</a>
+      <a href="form.html" class="categories__button-search button">Подобрать программу</a>
+      <div class="categories__item">
       <h3 class="categories__title categories__icon--slim">Похудение</h3>
       <p class="categories__text">Ваш кот весит больше собаки и почти утратил способность лазить
         по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
       </p>
       <a href="catalog-slim.html" class="categories__link">Каталог Slim</a>
-      <h3 class="categories__titile categories__icon--weight">Набор массы</h3>
+      </div>
+      <div class="categories__item">
+      <h3 class="categories__title categories__icon--weight">Набор массы</h3>
       <p class="categories__text">Заработать авторитет среди дворовых котов и даже собак?
         Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
       </p>
       <a href="catalog-pro.html" class="categories__link">Каталог Pro</a>
+      </div>
     </section>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества продукта</h2>
@@ -85,20 +89,20 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__name" href="index.html">CAT ENERGY</a>
+    <a class="page-footer__name" href="index.html"><img src="img/logo-footer.svg" width="128" height="24"></a>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/catenergy">Вконтакт
-            <img src="img/vk.svg" width="22" height="12" alt="vkontakte"></a>
+          <a class="social__link social__link--vk" href="https://vk.com/catenergy">
+            <img src="img/icon-vk.svg" width="22" height="12" alt="vkontakte"></a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--instagram" href="https://www.instagram.com/catenergy">
-            <img src="img/inst.svg" width="22" height="12" alt="instagram">Инстаграм</a>
+            <img src="img/icon-insta.svg" width="22" height="12" alt="instagram"></a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/catenergy">
-            <img src="img/fb.svg" width="22" height="12" alt="facebook">Фейсбук</a>
+            <img src="img/icon-fb.svg" width="22" height="12" alt="facebook"></a>
         </li>
       </ul>
     </div>
