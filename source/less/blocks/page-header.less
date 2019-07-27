@@ -1,6 +1,6 @@
 .page-header {
-  display: block;
-  width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__logo-image {
@@ -8,4 +8,31 @@
   padding-top: 10px;
   padding-left: 20px;
   padding-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo-image {
+    height: 64px;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo-image {
+    height: 80px;
+    width: 210px;
+  }
+
+  .page-header__wrapper {
+    width: 1200px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

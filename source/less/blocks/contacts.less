@@ -7,12 +7,47 @@
   padding-bottom: 25px;
 }
 
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .contacts__cooperation {
+  width: 140px;
+
   font-size: 16px;
   line-height: 20px;
 }
 
 .contacts__address {
+  width: 140px;
+
   font-size: 14px;
   line-height: 20px;
+  text-align: right;
 }
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    width: 708px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .contacts__cooperation {
+    width: 354px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    width: 324px;
+
+    font-size: 16px;
+  }
+}
+

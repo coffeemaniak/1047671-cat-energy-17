@@ -4,24 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи - Каталог</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-
   <header class="page-header">
-    <a href="index.html">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40"
-        alt="Логотип магазина">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть</button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item"><a href="index.html">Главная</a></li>
-        <li class="site-list__item"><a>Каталог продукции</a></li>
-        <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
-      </ul>
-    </nav>
+    <div class="page-header__wrapper">
+      <a href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40" alt="Логотип магазина">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item"><a>Каталог продукции</a></li>
+          <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="catalog-page">
@@ -32,25 +34,27 @@
         <!--карточкам добавлен отдельный класс kard, таким образом они являются
           и элементами блока товаров (goods), и отдельным блоком карточки (kard)-->
         <li class="goods__item kard">
-          <a href="pro-chicken-500.html"><img class="goods__item--photo" src="photo1.jpg" width="140" height="146"
-              alt="Фотография продукции"></a>
-          <a href="pro-chicken-500.html">
-            <h3 class="goods__name">Cat energy pro 500 г</h3>
-          </a>
-          <table class="goods__description">
-            <tr>
-              <td class="goods__field">Объем</td>
-              <td class="goods__value">500 г</td>
-            </tr>
-            <tr>
-              <td class="goods__field">Вкус</td>
-              <td class="goods__value">Курица</td>
-            </tr>
-            <tr>
-              <td class="goods__field">Цена</td>
-              <td class="goods__value">700 р.</td>
-            </tr>
-          </table>
+          <a href="pro-chicken-500.html"><img class="goods__item--photo kard__photo" src="photo1.jpg" width="140"
+              height="146" alt="Фотография продукции"></a>
+          <div class="goods__text">
+            <a href="pro-chicken-500.html">
+              <h3 class="goods__name">Cat energy pro 500 г</h3>
+            </a>
+            <table class="goods__description">
+              <tr>
+                <td class="goods__field">Объем</td>
+                <td class="goods__value">500 г</td>
+              </tr>
+              <tr>
+                <td class="goods__field">Вкус</td>
+                <td class="goods__value">Курица</td>
+              </tr>
+              <tr>
+                <td class="goods__field">Цена</td>
+                <td class="goods__value">700 р.</td>
+              </tr>
+            </table>
+          </div>
           <a class="goods__order button" href="order.html">Заказать</a>
         </li>
         <li class="goods__item kard">
@@ -245,8 +249,10 @@
 
     <section class="contacts">
       <h3 class="visually-hidden">Контакты</h3>
-      <h3 class="contacts__cooperation">Приглашаем к сотрудничеству диллеров!</h3>
-      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="contacts__wrapper">
+        <h3 class="contacts__cooperation">Приглашаем к сотрудничеству диллеров!</h3>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
       <iframe class="contacts__map" src="map.html" width="320" height="365"></iframe>
     </section>
   </main>
@@ -271,7 +277,14 @@
       </ul>
     </div>
     <div class="page-footer__copyright">
-      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="30" height="30">
+          <path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2
+          10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7
+          11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8
+          5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1
+          17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" /></svg>
+      </a>
     </div>
   </footer>
 </body>
