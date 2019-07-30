@@ -1,8 +1,35 @@
+.main-nav {
+  margin: 0 auto;
+  width: 320px;
+}
+
 .main-nav__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .main-nav__toggle {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 445px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 720px;
+  }
 }

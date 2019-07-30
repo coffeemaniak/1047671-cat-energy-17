@@ -1,20 +1,50 @@
 .goods__list {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.goods__name {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+.goods__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 320px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-.goods__field,
-.goods__value {
-  font-size: 12px;
-  line-height: 16px;
-  font-family: @default-font;
+@media (min-width: @tablet-width) {
+  .goods__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 708px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .goods__item {
+    flex-direction: column;
+
+    width: 324px;
+  }
 }
 
-.goods__value {
-  text-align: right;
+@media (min-width: @desktop-width) {
+  .goods__list {
+    width: 1220px;
+    margin-right: 110px;
+    margin-left: 110px;
+  }
+
+  .goods__item {
+    width: 245px;
+    min-height: 433px;
+  }
 }

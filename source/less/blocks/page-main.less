@@ -1,8 +1,16 @@
-.page-main {
-  /*background-image: url("/img/index-background-mobile@1x.jpg");*/
-  background-size: 320px 305px;
-  background-position: center;
+.page-main__wrapper {
+  background-image: url("/img/index-background-mobile@1x.jpg");
+  background-color: @light-green;
+  /*background-size: 320px 305px;*/
+  background-position: top;
   background-repeat: no-repeat;
+
+  position: relative;
+  width: 320px;
+  height: 306px;
+  padding-top: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .page-main__head {
@@ -17,4 +25,9 @@
   line-height: 14px;
   text-align: center;
   color: @white;
+}
+
+.page-main__photo {
+  position: absolute;
+  top: -142px;
 }
