@@ -5,10 +5,29 @@
 .example__title {
   font-size: 36px;
   line-height: 60px;
+  padding-left: 20px;
 }
 
 .example__text {
   font-size: 14px;
   line-height: 18px;
   font-family: @default-font;
+
+  padding-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding-left: 30px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+
+    padding-left: 30px;
+  }
 }

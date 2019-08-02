@@ -1,6 +1,7 @@
 .site-list__item {
   text-align: center;
   font-weight: 700;
+  font-family: @main-font;
 }
 
 .site-list__item a {
@@ -33,18 +34,24 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 510px;
+    width: 440px;
+    padding: 0;
+    padding-top: 24px;
   }
 
   .site-list__item {
-    padding-top: 40px;
     padding-bottom: 35px;
+    flex-grow: 0;
 
     font-size: 18px;
     line-height: 24.86px;
     font-weight: 400;
 
     border-bottom: 2px solid transparent;
+  }
+
+  .site-list__item a {
+    border-top: none;
   }
 
   .site-list__item a[href] {
