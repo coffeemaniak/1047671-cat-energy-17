@@ -32,3 +32,39 @@
   top: 170px;
   right: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .page-main__wrapper {
+    background-image: none;
+
+    position: relative;
+    width: 768px;
+    padding-left: 120px;
+    padding-right: 222px;
+  }
+
+  .page-main__head {
+  font-size: 60px;
+  line-height: 60px;
+  color: @black;
+  text-align: left;
+  }
+
+  .page-main__paragraph {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__wrapper {
+    background-image: url("/img/index-background-desktop@1x.jpg");
+    background-position: right;
+    background-size: 720px 698px;
+
+    position: relative;
+    width: 1440px;
+  }
+}

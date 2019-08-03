@@ -25,7 +25,7 @@
   margin-right: 20px;
 }
 
-.categorits__item {
+.categories__item {
   display: block;
   width: 280px;
   min-height: 265px;
@@ -92,6 +92,8 @@
 
 @media (min-width: @desktop-width) {
   .categories__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     width: 1220px;
@@ -99,8 +101,22 @@
     margin-left: 110px;
   }
 
-  .categorits__item {
+  .categories__item {
     width: 570px;
-    min-height: 372px;
+    min-height: 371px;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-bottom: 54px;
+  }
+
+  .categories__item:last-child {
+    margin-top: 0;
+  }
+
+  .categories__title {
+    font-size: 36px;
+    line-height: 37.02px;
+    padding-left: 215px;
   }
 }

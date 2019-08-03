@@ -69,3 +69,31 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 720px;
+    padding-top: 52px;
+  }
+
+  .site-list__item a {
+    font-size: 20px;
+    line-height: 24.86px;
+    color: @white;
+  }
+
+  .site-list__item a[href] {
+    &:hover {
+      color: #c1ddb1;
+    }
+
+    &:visited {
+      color: #94c377;
+    }
+
+    &:active {
+      color: @white;
+      border-bottom-color: @white;
+    }
+  }
+}
