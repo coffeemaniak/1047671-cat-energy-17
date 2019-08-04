@@ -11,15 +11,16 @@
   display: flex;
   justify-content: space-between;
   width: 280px;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 0 auto;
 }
 
 .contacts__cooperation {
   width: 140px;
+  margin: 0;
 
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
 }
 
 .contacts__address {
@@ -29,17 +30,18 @@
   line-height: 20px;
   text-align: right;
   font-family: @default-font;
+  font-style: normal;
 }
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
     width: 768px;
-    padding-right: 68px;
-    padding-left: 68px;
+    padding-right: 70px;
+    padding-left: 70px;
   }
 
   .contacts__cooperation {
-    width: 285px;
+    width: 160px;
 
     font-size: 20px;
     line-height: 25px;
@@ -59,12 +61,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+  }
   .contacts__map {
     width: 1440px;
   }
 
   .contacts__wrapper {
+    position: absolute;
     width: 570px;
     min-height: 200px;
+  }
+
+  .contacts__cooperation {
+    margin: 0;
   }
 }

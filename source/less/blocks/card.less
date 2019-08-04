@@ -9,9 +9,12 @@
 }
 
 .card__name {
+  width: 60%;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .card__name a {
@@ -20,7 +23,7 @@
 
 .card__field,
 .card__value {
-  width: 50%;
+  width: 140px;
 
   font-size: 12px;
   line-height: 16px;
@@ -33,6 +36,33 @@
 
 .card__order {
   width: 280px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.card__more--text {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: @default-font;
+
+  padding-bottom: 20px;
+}
+
+.card__to-all {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  height: 40px;
+  padding-top: 12px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #444444;
+
+  background-color: @light-grey;
 }
 
 @media (min-width: @tablet-width) {

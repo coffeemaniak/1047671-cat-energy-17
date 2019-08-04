@@ -1,33 +1,135 @@
 .example {
-  background-color: #f2f2f2;
+  background-color: @light-grey;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .example__title {
   font-size: 36px;
   line-height: 60px;
-  padding-left: 20px;
+  font-weight: 400;
 }
 
 .example__text {
   font-size: 14px;
   line-height: 18px;
   font-family: @default-font;
+}
 
-  padding-left: 20px;
+.example__slider {
+  display: flex;
+  justify-content: space-between;
+
+  width: 280px;
+}
+
+.example__weight,
+.example__days {
+  display: block;
+
+  width: 125px;
+
+  border-top: 1px solid #cdcdcd;
+  border-left: 1px solid #cdcdcd;
+  border-right: 1px solid #cdcdcd;
+}
+
+.example__weight--kilo,
+.example__days--time {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400px;
+}
+
+.example__weight--text,
+.example__days--text {
+  font-family: @default-font;
+  font-size: 12px;
+  line-height: 12px;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    color: #cdcdcd;
+  }
+
+  &::after {
+    content: "";
+    width: 18px;
+    height: 1px;
+    color: #cdcdcd;
+  }
+}
+
+.example__costs {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
+  .example {
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .example__slider  {
+    width: 708px;
+  }
+
   .example__title {
     font-size: 60px;
     line-height: 60px;
-
-    padding-left: 30px;
   }
 
   .example__text {
     font-size: 16px;
     line-height: 24px;
+  }
 
-    padding-left: 30px;
+  .example__weight,
+  .example__days {
+    width: 162px;
+    margin-right: 25px;
+  }
+
+  .example__costs {
+    margin-left: auto;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .example__weight--kilo,
+  .example__days--time {
+    font-size: 30px;
+    line-height: 37.02px;
+  }
+
+  .example__weight--text,
+  .example__days--text {
+  font-family: @default-font;
+  font-size: 14px;
+  line-height: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .example__weight,
+  .example__days {
+    width: 170px;
+    margin-right: 42px;
   }
 }
