@@ -66,22 +66,55 @@
 }
 
 @media (min-width: @tablet-width) {
+  .card {
+    width: 324px;
+    margin-bottom: 45px;
+
+    background-image: linear-gradient(to bottom, white 10%, @light-grey 10%);
+  }
+
   .card__name {
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    text-align: center;
     font-size: 20px;
     text-transform: uppercase;
   }
 
   .card__description--row {
-    min-height: 34px;
-    width: 252px;
-    padding-left: 39px;
-    padding-right: 34px;
+    min-height: 40px;
+    width: 254px;
+
+    padding-top: 8px;
+    border-bottom: 1px solid #cdcdcd;
+
+    vertical-align: middle;
   }
 
   .card__field,
   .card__value {
     font-size: 16px;
     font-family: @default-font;
+  }
+
+  .card__text {
+    width: 324px;
+    padding-left: 39px;
+    padding-right: 34px;
+  }
+
+  .card__photo {
+    text-align: center;
+    background-color: transparent;
+  }
+
+  .card__order {
+    margin: auto;
+    margin-top: 35px;
+    width: 250px;
   }
 }
 
