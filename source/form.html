@@ -9,14 +9,14 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="container">
+
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40" alt="Логотип магазина">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть</button>
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40" alt="Логотип магазина">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><img src="img/icon-mobile-menu.svg" width="26"
+            height="26"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
@@ -25,6 +25,7 @@
       </nav>
     </div>
   </header>
+
   <main class="form-page">
     <h1 class="form-page__title">Подбор программы</h1>
     <b class="form-page__description">Заполните анкету и мы подберем программу питания
@@ -34,13 +35,13 @@
       <fieldset class="form-page__about-cat">
         <label>
           Имя:<sup>*</sup><input class="form-page__about-cat--name" type="text" placeholder="Барсик" required>
-        </label>
+        </label><br>
         <label>
           Вес (кг):<sup>*</sup> <input class="form-page__about-cat--weight" type="number" placeholder="7" required>
-        </label>
+        </label><br>
         <label>
           Возраст (лет) <input class="form-page__about-cat--age" type="number" placeholder="7">
-        </label>
+        </label><br>
       </fieldset>
       <fieldset class="form-page__purpose">
         <label>

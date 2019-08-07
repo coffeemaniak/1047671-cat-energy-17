@@ -71,6 +71,7 @@
     margin-bottom: 45px;
 
     background-image: linear-gradient(to bottom, white 10%, @light-grey 10%);
+    text-align: center;
   }
 
   .card__name {
@@ -106,10 +107,11 @@
     padding-right: 34px;
   }
 
-  .card__photo {
+/*  .card__photo {
+    display: block;
     text-align: center;
     background-color: transparent;
-  }
+  }*/
 
   .card__order {
     margin: auto;
@@ -121,5 +123,28 @@
 @media (min-width: @desktop-width) {
   .card__name {
     font-size: 20px;
+  }
+
+  .card {
+    width: 245px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .card__text {
+    width: 175px;
+    padding-right: 35px;
+    padding-left: 35px;
+    text-align: center;
+  }
+
+  .card__description {
+    width: 175px;
+  }
+
+  .card__order {
+    width: 170px;
   }
 }
