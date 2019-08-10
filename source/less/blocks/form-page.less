@@ -1,83 +1,150 @@
 .form-page {
-  width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 100%;
+  // padding-left: 20px;
+  // padding-right: 20px;
 }
 
 .form-page__title {
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
+
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
 }
 
 .form-page__description {
+  display: block;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   text-align: left;
   text-transform: uppercase;
+
+  margin-bottom: 35px;
+  padding-left: 20px;
+}
+
+.form-page__request {
+  // width: 280px;
+  padding: 0;
+  margin: 0;
 }
 
 .form-page__about-cat {
   border: none;
-  border-bottom: 2px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
 
-  padding: 0;
   margin: 0;
-  margin-top: 100px;
+  margin-top: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .form-page__about-cat--name {
   width: 230px;
-  height: 45px;
-
-  margin-bottom: 14px;
-
-  border: 1px solid #cdcdcd;
 }
 
 .form-page__about-cat--weight {
   width: 205px;
-  height: 44px;
+}
 
+.form-page__about-cat--age {
+  width: 172px;
+}
+
+.form-page__about-cat--name,
+.form-page__about-cat--weight,
+.form-page__about-cat--age {
+  padding-top: 13px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+
+  margin-left: 10px;
   margin-bottom: 14px;
 
   border: 1px solid #cdcdcd;
 }
 
-.form-page__about-cat--age {
-  width: 172px;
-  height: 44px;
-
-  margin-bottom: 25px;
-
-  border: 1px solid #cdcdcd;
+.form-page__about-cat--name::placeholder,
+.form-page__about-cat--weight::placeholder,
+.form-page__about-cat--age::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  font-family: @main-font;
+  text-transform: uppercase;
 }
+
+.form-page__about-cat label:last-child input {
+  margin-bottom: 24px;
+}
+
+// form fieldset:first-child label:nth-child(5) {
+//   font-size: 30px;
+// }
 
 .form-page__purpose {
   border: none;
-  border-bottom: 2px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
 
-  padding: 0;
-  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin: 0;
 
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
+  text-transform: uppercase;
 }
+
+.form-page__purpose label {
+  display: block;
+  padding-bottom: 13px;
+}
+
+.form-page__purpose input {
+  margin-right: 13px;
+}
+
+// .form-page__purpose--loss {
+//   width: 140px;
+// }
+
+// .form-page__purpose--gain {
+//   width: 140px;
+// }
+
+// .form-page__purpose--dontknow {
+//   width: 232px;
+// }
 
 .form-page__about-owner {
   border: none;
+
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 20px;
+  margin: 0;
+  padding-bottom: 0;
 }
 
 .form-page__about-owner--title {
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
 }
 
 .form-page__about-owner--email {
@@ -85,23 +152,37 @@
   height: 44px;
 
   margin-bottom: 14px;
+  margin-left: 10px;
 
   border: 1px solid #cdcdcd;
 }
 
 .form-page__about-owner--tel {
-  width: 203px;
+  width: 207px;
   height: 44px;
 
   margin-bottom: 30px;
+  margin-left: 10px;
 
   border: 1px solid #cdcdcd;
+}
+
+.form-page__about-owner--email::placeholder,
+.form-page__about-owner--tel::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: @main-font;
+
+  padding-left: 15px;
 }
 
 .form-page__comment {
   border: none;
   margin: 0;
   padding: 0;
+  padding-left: 20px;
 }
 
 .form-page__comment legend {
@@ -123,9 +204,26 @@
   border: 1px solid #cdcdcd;
 }
 
+.form-page__comment textarea::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: @main-font;
+
+  padding-left: 14px;
+  padding-top: 12px;
+}
+
 .form-page__add {
+  // width: 180px;
+  display: flex;
+  flex-direction: column;
+
   border: none;
   padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0;
   margin-bottom: 35px;
 
@@ -142,25 +240,43 @@
   padding-bottom: 30px;
 }
 
+// .form-page__add label {
+//   font-size: 16px;
+//   line-height: 18px;
+//   font-weight: 400;
+//   text-transform: uppercase;
+// }
+
+.form-page__add input {
+  margin-bottom: 13px;
+  margin-left: 17px;
+}
+
+.form-page__add label:last-child input {
+  margin-bottom: 0;
+}
+
 .form-page__send {
   font-family: @main-font;
   font-weight: 400;
-  margin-left: 0;
+  margin-left: 20px;
   margin-right: 0;
   padding-top: 0;
 }
 
 @media (min-width: @tablet-width) {
   .form-page {
-    width: 708px;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 100%;
+    margin: 0 auto;
+    // padding-left: 30px;
+    // padding-right: 30px;
   }
 
   .form-page__title {
     font-size: 60px;
 
     margin-bottom: 50px;
+    padding-left: 30px;
   }
 
   .form-page__description {
@@ -168,16 +284,238 @@
     line-height: 30px;
 
     margin-bottom: 65px;
+    padding-left: 70px;
+  }
+
+  .form-page__request {
+    width: 100%;
   }
 
   .form-page__about-cat {
     font-size: 20px;
     line-height: 20px;
+
+    padding-left: 70px;
+    padding-right: 70px;
+
+    border-bottom: none;
   }
 
   .form-page__about-cat--name {
+    width: 572px;
+  }
+
+  .form-page__about-cat--name,
+  .form-page__about-cat--weight,
+  .form-page__about-cat--age {
+    margin-bottom: 22px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+  }
+
+  .form-page__about-cat--name::placeholder,
+  .form-page__about-cat--weight::placeholder,
+  .form-page__about-cat--age::placeholder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/*  input[type="text"]::placeholder {
+    font-size: 20px;
+  }*/
+
+
+
+  .form-page__about-cat--weight {
+    width: 540px;
+
+    margin-bottom: 22px;
+  }
+
+  .form-page__about-cat--age {
+    width: 497px;
+
+    margin-bottom: 73px;
+  }
+
+  .form-page__purpose {
+    margin-left: 65px;
+    width: 634px;
+    height: 200px;
+    margin-bottom: 73px;
+
+    border: 1px solid #cdcdcd;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form-page__about-owner {
+    padding-left: 70px;
+    padding-right: 70px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form-page__about-owner--title {
+    font-size: 36px;
+    line-height: 36px;
+
+    margin-bottom: 70px;
+  }
+
+  .form-page__about-owner--email {
+    width: 552px;
+    height: 53px;
+
+    margin-bottom: 22px;
+  }
+
+  .form-page__about-owner--tel {
+    width: 536px;
+    height: 53px;
+
+    margin-bottom: 70px;
+  }
+
+  .form-page__about-owner--email::placeholder,
+  .form-page__about-owner--tel::placeholder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form-page__comment {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .form-page__comment legend {
+    font-size: 36px;
+    line-height: 36px;
+
+    margin-bottom: 70px;
+    padding: 0;
+  }
+
+  .form-page__comment textarea {
+    width: 630px;
+    height: 175px;
+
+    margin-bottom: 70px;
+  }
+
+  .form-page__add {
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+
+    display: block;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form-page__add legend {
+    font-size: 36px;
+    line-height: 36px;
+
+    margin-bottom: 50px;
+  }
+
+  .form-page__add label {
+    display: inline-block;
+    width: 236px;
+  }
+
+  .form-page__send {
+    font-family: @main-font;
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-left:70px;
+    margin-right: 0;
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-page__title {
+    padding-left: 110px;
+  }
+
+  .form-page__description {
+    padding-left: 110px;
+  }
+
+  .form-page__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .form-page__about-cat {
     width: 570px;
-    height: 50px;
-    margin-right: 40px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-page__about-cat--name {
+    width: 506px;
+  }
+
+  .form-page__about-cat--weight {
+    width: 475px;
+  }
+
+  .form-page__about-cat--age {
+    width: 436px;
+  }
+
+  .form-page__purpose {
+    width: 570px;
+  }
+
+  .form-page__about-owner {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .form-page__about-owner--email {
+    width: 487px;
+  }
+
+  .form-page__about-owner--tel {
+    width: 470px;
+  }
+
+  .form-page__comment {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .form-page__comment textarea {
+    width: 100%;
+  }
+
+  .form-page__add {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .form-page__send {
+    width: 570px;
   }
 }

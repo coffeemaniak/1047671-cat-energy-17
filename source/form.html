@@ -28,42 +28,46 @@
 
   <main class="form-page">
     <h1 class="form-page__title">Подбор программы</h1>
-    <b class="form-page__description">Заполните анкету и мы подберем программу питания
+    <b class="form-page__description">Заполните анкету и мы подберем <br> программу питания
       для вашего кота
     </b>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form action="https://echo.htmlacademy.ru" method="post" class="form-page__request">
+      <div class="form-page__wrapper">
       <fieldset class="form-page__about-cat">
         <label>
           Имя:<sup>*</sup><input class="form-page__about-cat--name" type="text" placeholder="Барсик" required>
-        </label><br>
+        </label>
         <label>
           Вес (кг):<sup>*</sup> <input class="form-page__about-cat--weight" type="number" placeholder="7" required>
-        </label><br>
+        </label>
         <label>
-          Возраст (лет) <input class="form-page__about-cat--age" type="number" placeholder="7">
-        </label><br>
+          Возраст (лет): <input class="form-page__about-cat--age" type="number" placeholder="7">
+        </label>
       </fieldset>
       <fieldset class="form-page__purpose">
         <label>
-          <input type="radio" name="purpose" value="loss-weight" checked> Похудение
-        </label><br>
+          <input class="form-page__purpose--loss" type="radio" name="purpose" value="loss-weight" checked> Похудение
+        </label>
         <label>
-          <input type="radio" name="purpose" value="gain-weight"> Набор массы
-        </label><br>
+          <input class="form-page__purpose--gain" type="radio" name="purpose" value="gain-weight"> Набор массы
+        </label>
         <label>
-          <input type="radio" name="purpose" value="dont-know">Не знаю (нужен ваш совет)
+          <input class="form-page__purpose--dontknow" type="radio" name="purpose" value="dont-know">Не знаю (нужен ваш совет)
         </label>
       </fieldset>
+      </div>
       <fieldset class="form-page__about-owner">
         <legend class="form-page__about-owner--title">Контактные данные (владельца кота)</legend>
+        <div class="form-page__wrapper">
         <label>
           E-mail: <sup>*</sup><input class="form-page__about-owner--email" type="email"
             placeholder="kuklachev@gmail.com" required>
-        </label><br>
+        </label>
         <label>
           Телефон:<sup>*</sup><input class="form-page__about-owner--tel" type="tel" placeholder="8 (960) 900-60-90"
             required>
         </label>
+        </div>
       </fieldset>
       <fieldset class="form-page__comment">
         <legend>Комментарий</legend>
@@ -73,16 +77,16 @@
         <legend>Дополнительно</legend>
         <label>
           <input type="checkbox" name="addition" value="sugarfree" checked> Сахарозаменитель
-        </label><br>
+        </label>
         <label>
           <input type="checkbox" name="addition" value="water">Питьевая вода
-        </label><br>
+        </label>
         <label>
           <input type="checkbox" name="addition" value="milk">Молоко
-        </label><br>
+        </label>
         <label>
           <input type="checkbox" name="addition" value="vitamin">Витамины
-        </label><br>
+        </label>
       </fieldset>
       <button type="submit" class="form-page__send button">Отправить заявку</button>
     </form>
@@ -161,6 +165,23 @@
       </a>
     </div>
   </footer>
+  <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+
+    </script>
 </body>
 
 </html>
