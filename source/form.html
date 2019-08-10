@@ -33,40 +33,41 @@
     </b>
     <form action="https://echo.htmlacademy.ru" method="post" class="form-page__request">
       <div class="form-page__wrapper">
-      <fieldset class="form-page__about-cat">
-        <label>
-          Имя:<sup>*</sup><input class="form-page__about-cat--name" type="text" placeholder="Барсик" required>
-        </label>
-        <label>
-          Вес (кг):<sup>*</sup> <input class="form-page__about-cat--weight" type="number" placeholder="7" required>
-        </label>
-        <label>
-          Возраст (лет): <input class="form-page__about-cat--age" type="number" placeholder="7">
-        </label>
-      </fieldset>
-      <fieldset class="form-page__purpose">
-        <label>
-          <input class="form-page__purpose--loss" type="radio" name="purpose" value="loss-weight" checked> Похудение
-        </label>
-        <label>
-          <input class="form-page__purpose--gain" type="radio" name="purpose" value="gain-weight"> Набор массы
-        </label>
-        <label>
-          <input class="form-page__purpose--dontknow" type="radio" name="purpose" value="dont-know">Не знаю (нужен ваш совет)
-        </label>
-      </fieldset>
+        <fieldset class="form-page__about-cat">
+          <label>
+            Имя:<sup>*</sup><input class="form-page__about-cat--name" type="text" placeholder="Барсик" required>
+          </label>
+          <label>
+            Вес (кг):<sup>*</sup> <input class="form-page__about-cat--weight" type="number" placeholder="7" required>
+          </label>
+          <label>
+            Возраст (лет): <input class="form-page__about-cat--age" type="number" placeholder="7">
+          </label>
+        </fieldset>
+        <fieldset class="form-page__purpose">
+          <label>
+            <input class="form-page__purpose--loss" type="radio" name="purpose" value="loss-weight" checked> Похудение
+          </label>
+          <label>
+            <input class="form-page__purpose--gain" type="radio" name="purpose" value="gain-weight"> Набор массы
+          </label>
+          <label>
+            <input class="form-page__purpose--dontknow" type="radio" name="purpose" value="dont-know">Не знаю (нужен ваш
+            совет)
+          </label>
+        </fieldset>
       </div>
       <fieldset class="form-page__about-owner">
         <legend class="form-page__about-owner--title">Контактные данные (владельца кота)</legend>
         <div class="form-page__wrapper">
-        <label>
-          E-mail: <sup>*</sup><input class="form-page__about-owner--email" type="email"
-            placeholder="kuklachev@gmail.com" required>
-        </label>
-        <label>
-          Телефон:<sup>*</sup><input class="form-page__about-owner--tel" type="tel" placeholder="8 (960) 900-60-90"
-            required>
-        </label>
+          <label>
+            E-mail: <sup>*</sup><input class="form-page__about-owner--email" type="email"
+              placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label>
+            Телефон:<sup>*</sup><input class="form-page__about-owner--tel" type="tel" placeholder="8 (960) 900-60-90"
+              required>
+          </label>
         </div>
       </fieldset>
       <fieldset class="form-page__comment">
@@ -166,22 +167,22 @@
     </div>
   </footer>
   <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
-      navMain.classList.remove('main-nav--nojs');
+    navMain.classList.remove('main-nav--nojs');
 
-      navToggle.addEventListener('click', function () {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
 
-    </script>
+  </script>
 </body>
 
 </html>
