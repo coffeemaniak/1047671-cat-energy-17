@@ -1,6 +1,7 @@
 .page-footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   width: 320px;
   padding-top: 32px;
@@ -13,6 +14,7 @@
 .page-footer__social {
   display: flex;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .social__list {
@@ -29,36 +31,66 @@
   padding-right: 14px;
 }
 
+.social__link--vk,
+.social__link--instagram,
+.social__link--facebook {
+  path {
+    fill: #666666;
+  }
+
+  &:hover {
+    path {
+      fill: @light-green;
+    }
+  }
+
+  &:visited {
+    path {
+      fill: #c8e0ba;
+    }
+  }
+}
+
 .page-footer__copyright {
   display: flex;
   justify-content: space-between;
 
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
 }
 
 .page-footer__link {
-  width: 140px;
   font-family: @default-font;
   font-size: 16px;
   line-height: 16px;
 }
 
+.page-footer__link svg {
+  margin-left: auto;
+}
+
+.page-footer__name img {
+  padding-bottom: 28px;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
+    padding-top: 60px;
     padding-left: 30px;
     padding-right: 30px;
+    width: 768px;
   }
 
-  .page-footer__name {
-    width: 132px;
+  .page-footer__name img {
+    width: 162px;
+    margin: 0;
   }
 
   .page-footer__social {
-    width: 155px;
+    width: 162px;
   }
 
   .page-footer__copyright {
@@ -68,6 +100,7 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
+    width: 1440px;
     padding-left: 110px;
     padding-right: 110px;
   }

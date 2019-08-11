@@ -10,9 +10,17 @@
   padding-bottom: 10px;
 }
 
+.page-header__wrapper {
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 @media (min-width: @tablet-width) {
   .page-header__logo-image {
-    height: 64px;
+    width: 175px;
+    height: 60px;
+    margin-top: 25px;
+    padding: 0;
   }
 
   .page-header__wrapper {
@@ -28,11 +36,16 @@
   .page-header__logo-image {
     height: 80px;
     width: 210px;
+    margin-top: 50px;
+
+    position: relative;
+    z-index: 1;
   }
 
   .page-header__wrapper {
-    width: 1200px;
+    width: 1440px;
     padding-left: 110px;
     padding-right: 110px;
+    margin: 0 auto;
   }
 }

@@ -9,9 +9,12 @@
 }
 
 .card__name {
+  width: 60%;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .card__name a {
@@ -20,7 +23,7 @@
 
 .card__field,
 .card__value {
-  width: 50%;
+  width: 140px;
 
   font-size: 12px;
   line-height: 16px;
@@ -33,19 +36,63 @@
 
 .card__order {
   width: 280px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.card__more--text {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: @default-font;
+
+  padding-bottom: 20px;
+}
+
+.card__to-all {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  height: 40px;
+  padding-top: 12px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #444444;
+
+  background-color: @light-grey;
 }
 
 @media (min-width: @tablet-width) {
+  .card {
+    width: 324px;
+    margin-bottom: 45px;
+
+    background-image: linear-gradient(to bottom, white 10%, @light-grey 10%);
+    text-align: center;
+  }
+
   .card__name {
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    text-align: center;
     font-size: 20px;
     text-transform: uppercase;
   }
 
   .card__description--row {
-    min-height: 34px;
-    width: 252px;
-    padding-left: 39px;
-    padding-right: 34px;
+    min-height: 40px;
+    width: 254px;
+
+    padding-top: 8px;
+    border-bottom: 1px solid #cdcdcd;
+
+    vertical-align: middle;
   }
 
   .card__field,
@@ -53,10 +100,51 @@
     font-size: 16px;
     font-family: @default-font;
   }
+
+  .card__text {
+    width: 324px;
+    padding-left: 39px;
+    padding-right: 34px;
+  }
+
+  /*.card__photo {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+  }*/
+
+  .card__order {
+    margin: auto;
+    margin-top: 35px;
+    width: 250px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .card__name {
     font-size: 20px;
+  }
+
+  .card {
+    width: 245px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .card__text {
+    width: 175px;
+    padding-right: 35px;
+    padding-left: 35px;
+    text-align: center;
+  }
+
+  .card__description {
+    width: 175px;
+  }
+
+  .card__order {
+    width: 170px;
   }
 }
