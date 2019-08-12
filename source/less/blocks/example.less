@@ -9,107 +9,164 @@
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
+  font-family: @main-font;
+
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding-top: 10px;
 }
 
 .example__text {
   font-size: 14px;
   line-height: 18px;
   font-family: @default-font;
+
+  padding-right: 10px;
 }
 
-.example__slider {
+.example__block {
   display: flex;
   justify-content: space-between;
 
   width: 280px;
+  min-height: 58px;
 }
 
 .example__weight,
 .example__days {
   display: block;
+  position: relative;
 
   width: 125px;
+  padding-top: 12px;
 
-  border-top: 1px solid #cdcdcd;
-  border-left: 1px solid #cdcdcd;
-  border-right: 1px solid #cdcdcd;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example__weight--kilo,
 .example__days--time {
   font-size: 24px;
   line-height: 24px;
-  font-weight: 400px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.example__weight--kilo {
+  padding-left: 44px;
+}
+
+.example__days--time {
+  padding-left: 23px;
 }
 
 .example__weight--text,
 .example__days--text {
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 17px;
+
+  width: 86px;
+  background-color: @light-grey;
+  padding-left: 4px;
+
   font-family: @default-font;
   font-size: 12px;
   line-height: 12px;
-
-  &::before {
-    content: "";
-    width: 18px;
-    height: 1px;
-    color: #cdcdcd;
-  }
-
-  &::after {
-    content: "";
-    width: 18px;
-    height: 1px;
-    color: #cdcdcd;
-  }
+  text-align: center;
 }
 
 .example__costs {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  text-transform: uppercase;
 
   text-align: center;
+
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+.example__slider {
+  display: block;
+
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: @tablet-width) {
   .example {
     width: 768px;
-    padding-left: 30px;
-    padding-right: 30px;
+    background-color: @white;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .example__slider {
-    width: 708px;
+  .example__block {
+    width: 375px;
+    padding-left: 30px;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .example__text {
     font-size: 16px;
     line-height: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .example__weight,
   .example__days {
-    width: 162px;
-    margin-right: 25px;
+    width: 168px;
+    min-height: 74px;
+
+    padding-top: 18px;
+
+    box-sizing: border-box;
+  }
+
+  .example__weight {
+    margin-right: 40px;
+  }
+
+  .example__weight--kilo,
+  .example__days--time {
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 400;
+  }
+
+  .example__weight--kilo {
+    padding-left: 58px;
+  }
+
+  .example__days--time {
+    padding-left: 30px;
   }
 
   .example__costs {
     margin-left: auto;
 
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
     font-weight: 400;
-  }
 
-  .example__weight--kilo,
-  .example__days--time {
-    font-size: 30px;
-    line-height: 37.02px;
+    display: block;
+    width: 207px;
+    text-align: right;
+    padding-right: 30px;
+    position: relative;
+    margin-top: -65px;
+    margin-bottom: 70px;
   }
 
   .example__weight--text,
@@ -117,6 +174,19 @@
     font-family: @default-font;
     font-size: 14px;
     line-height: 14px;
+
+    background-color: @white;
+
+    left: 38px;
+  }
+
+  .example__slider {
+    width: 768px;
+    min-height: 646px;
+    padding-left: 0;
+    padding-right: 0;
+
+    background-image: linear-gradient(to bottom, @white 180px, @light-grey 180px);
   }
 }
 
