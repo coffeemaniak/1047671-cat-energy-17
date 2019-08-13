@@ -96,6 +96,7 @@
     </section>
     <section class="example">
       <h2 class="visually-hidden">Примеры и отзывы владельцев</h2>
+      <div class="example__wrapper">
       <h3 class="example__title">Живой пример</h3>
       <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
         обычный корм на Cat Energy Slim. Отличный резульат без изнуряющих тренировок!
@@ -110,6 +111,7 @@
           <span class="example__days--text">затрачено времени</span></div>
       </div>
       <p class="example__costs">Затраты на питание: 15 000 рублей</p>
+      </div>
       <div class="example__slider slider">
         <div class="slider__before">
         <picture>
@@ -127,16 +129,21 @@
       width="280" height="280" alt="Фото Бориса ПОСЛЕ">
       </picture>
       </div>
+      </div>
+      <div class="slider__switcher">
       <label class="slider__name--before">
       <input type="radio" name="toggle" value="before" class="slider__btn--before">
       Было</label>
       <div class="slider__range">
-        <div class="slider__range--scale"></div>
+        <div class="slider__range--scale">
+          <div class="slider__range--control"></div>
+        </div>
       </div>
       <label class="slider__name--after">
       <input type="radio" name="toggle" value="after" class="slider__btn--after">
       Стало</label>
       </div>
+
 
     </section>
     <section class="contacts">

@@ -35,10 +35,18 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    padding-top: 0;
+  }
+
   .contacts__wrapper {
     width: 768px;
     padding-right: 70px;
     padding-left: 70px;
+    margin-top: 65px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
   }
 
   .contacts__cooperation {
@@ -49,12 +57,13 @@
   }
 
   .contacts__address {
-    width: 285px;
+    width: 165px;
 
     font-size: 16px;
+    text-align: right;
   }
 
-  .contacts__map {
+  .contacts iframe {
     width: 768px;
     height: 400px;
     margin: 0;
@@ -66,7 +75,7 @@
     position: relative;
   }
 
-  .contacts__map {
+  .contacts iframe {
     width: 1440px;
   }
 
