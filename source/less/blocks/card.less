@@ -54,6 +54,7 @@
   width: 280px;
   height: 40px;
   padding-top: 12px;
+  margin-bottom: 25px;
 
   font-size: 16px;
   line-height: 20px;
@@ -77,8 +78,8 @@
   .card__name {
     width: 150px;
     margin: 0 auto;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    margin-top: 50px;
+    margin-bottom: 24px;
 
     text-align: center;
     font-size: 20px;
@@ -107,16 +108,25 @@
     padding-right: 34px;
   }
 
-  /*.card__photo {
+  .card__photo {
     display: block;
-    text-align: center;
-    background-color: transparent;
-  }*/
+    width: 100%;
+    margin: 0 auto;
+  }
 
   .card__order {
     margin: auto;
     margin-top: 35px;
     width: 250px;
+  }
+
+  .card__img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: center;
+    width: 100%;
+    min-height: 205px;
   }
 }
 

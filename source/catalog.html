@@ -16,7 +16,7 @@
       <a href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40" alt="Логотип магазина">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><img src="img/icon-mobile-menu.svg" width="26"
             height="26"></button>
         <ul class="main-nav__list site-list">
@@ -33,11 +33,19 @@
     <h2 class="visually-hidden">Основные товары</h2>
     <section class="goods">
       <ul class="goods__list">
-        <!--карточкам добавлен отдельный класс kard, таким образом они являются
-          и элементами блока товаров (goods), и отдельным блоком карточки (card)-->
         <li class="goods__item card">
-          <a href="pro-chicken-500.html"><img class="card__photo" src="img/chicken-small-mobile@1x.jpg" width="140"
-              height="146" alt="Фотография продукции"></a>
+          <div class="card__img-wrapper">
+            <a href="pro-chicken-500.html">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png">
+                <img class="card__photo" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg"
+                  alt="Фотография продукции">
+              </picture>
+            </a>
+          </div>
           <div class="card__text">
             <a href="pro-chicken-500.html">
               <h3 class="card__name">Cat energy pro 500 г</h3>
@@ -60,8 +68,18 @@
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
         <li class="goods__item card">
-          <a href="pro-chicken-1000.html"><img class="card__photo" src="img/chicken-big-mobile@1x.jpg" width="140"
-              height="146" alt="Фотография продукции"></a>
+          <div class="card__img-wrapper">
+            <a href="pro-chicken-1000.html">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+                <img class="card__photo" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x"
+                  width="140" height="146" alt="Фотография продукции">
+              </picture>
+            </a>
+          </div>
           <div class="card__text">
             <a href="pro-chicken-1000.html">
               <h3 class="card__name">Cat energy pro 1000 г</h3>
@@ -84,8 +102,18 @@
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
         <li class="goods__item card">
-          <a href="pro-fish-500.html"><img class="card__photo" src="img/fish-small-mobile@1x.jpg" width="140"
-              height="146" alt="Фотография продукции"></a>
+          <div class="card__img-wrapper">
+            <a href="pro-fish-500.html">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+                <img class="card__photo" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x"
+                  width="140" height="146" alt="Фотография продукции">
+              </picture>
+            </a>
+          </div>
           <div class="card__text">
             <a href="pro-fish-500.html">
               <h3 class="card__name">Cat energy pro 500 г</h3>
@@ -108,8 +136,18 @@
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
         <li class="goods__item card">
-          <a href="pro-fish-1000.html"><img class="card__photo" src="img/fish-big-mobile@1x.jpg" width="140"
-              height="146" alt="Фотография продукции"></a>
+          <div class="card__img-wrapper">
+            <a href="pro-fish-1000.html">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+                <source media="(min-width: 758px)"
+                  srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+                <img class="card__photo" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg"
+                  width="140" height="146" alt="Фотография продукции">
+              </picture>
+            </a>
+          </div>
           <div class="card__text">
             <a href="pro-fish-1000.html">
               <h3 class="card__name">Cat energy pro 1000 г</h3>
@@ -132,8 +170,18 @@
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
         <li class="goods__item card">
-          <a href="slim-buckwheat-500.html"><img class="card__photo" src="img/buckwheat-small-mobile@1x.jpg" width="140"
-              height="146" alt="Фотография продукции"></a>
+          <div class="card__img-wrapper">
+            <a href="slim-buckwheat-500.html">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png">
+                <source media="(min-width: 768px)"
+                  srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+                <img class="card__photo" src="img/buckwheat-small-mobile@1x.jpg"
+                  srcset="img/buckwheat-small-mobile@2x.jpg 2x" width="140" height="146" alt="Фотография продукции">
+              </picture>
+            </a>
+          </div>
           <div class="card__text">
             <a href="slim-buckwheat-500.html">
               <h3 class="card__name">Cat energy slim 500 г</h3>
@@ -156,8 +204,18 @@
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
         <li class="goods__item card">
-          <a href="slim-buckwheat-1000.html"><img class="card__photo" src="img/buckwheat-big-mobile@1x.jpg" width="140"
-              height="146" alt="Фотография продукции"></a>
+          <div class="card__img-wrapper">
+          <a href="slim-buckwheat-1000.html">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+              <source media="(min-width:768px)"
+                srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+              <img class="card__photo" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x"
+                width="140" height="146" alt="Фотография продукции">
+            </picture>
+          </a>
+          </div>
           <div class="card__text">
             <a href="slim-buckwheat-1000.html">
               <h3 class="card__name">Cat energy slim 1000 г</h3>
@@ -180,8 +238,18 @@
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
         <li class="goods__item card">
-          <a href="slim-rice-500.html"><img class="card__photo" src="img/rice-small-mobile@1x.jpg" width="140"
-              height="146" alt="Фотография продукции"></a>
+          <div class="card__img-wrapper">
+          <a href="slim-rice-500.html">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
+              <img class="card__photo" src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg"
+                width="140" height="146" alt="Фотография продукции">
+            </picture>
+          </a>
+          </div>
           <div class="card__text">
             <a href="slim-rice-500.html">
               <h3 class="card__name">Cat energy slim 500 г</h3>
@@ -203,7 +271,13 @@
           </div>
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
-        <li class="goods__more card">Показать еще 100500 товаров
+        <li class="goods__more card">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/icon-plus.svg">
+            <source media="(min-width: 768px)" srcset="img/icon-plus.svg">
+            <img src="img/icon-plus-mobile.svg" width="31" height="31">
+          </picture>
+          Показать еще 100500 товаров
           <p class="card__more--text">На самом деле вкусов гораздо больше!</p>
           <a class="card__to-all" href="#">Показать все</a>
         </li>
@@ -267,7 +341,10 @@
         <h3 class="contacts__cooperation">Приглашаем к сотрудничеству диллеров!</h3>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <iframe class="contacts__map" src="map.html" width="320" height="365"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1565625255555!5m2!1sru!2sru"
+        width="320" height="365" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </iframe>
     </section>
   </main>
   <footer class="page-footer">

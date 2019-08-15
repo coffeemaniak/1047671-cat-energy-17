@@ -34,24 +34,31 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 440px;
+    width: 400px;
     padding: 0;
-    padding-top: 24px;
+    padding-top: 19px;
+    left: -40px;
+    position: relative;
   }
 
   .site-list__item {
-    padding-bottom: 35px;
     flex-grow: 0;
-
-    font-size: 18px;
-    line-height: 24.86px;
-    font-weight: 400;
 
     border-bottom: 2px solid transparent;
   }
 
   .site-list__item a {
     border-top: none;
+
+    font-size: 18px;
+    line-height: 24.86px;
+    font-weight: 400;
+
+    color: @black;
+  }
+
+  .site-list__item a:not([href]) {
+    border-bottom-color: #68b738;
   }
 
   .site-list__item a[href] {

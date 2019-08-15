@@ -7,8 +7,9 @@
 
   position: relative;
   width: 320px;
-  height: 440px;
+  height: 480px;
   padding-top: 26px;
+  margin-bottom: 22px;
 }
 
 .page-main__head {
@@ -25,6 +26,7 @@
   line-height: 14px;
   text-align: center;
   color: @white;
+  text-transform: uppercase;
 }
 
 .page-main__photo {
@@ -33,14 +35,38 @@
   right: 20px;
 }
 
+.page-main__button-search {
+  position: absolute;
+  top: 440px;
+
+  display: block;
+  width: 280px;
+  height: 42px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 23px;
+  padding-top: 12px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: @white;
+
+  background-color: @light-green;
+}
+
 @media (min-width: @tablet-width) {
   .page-main__wrapper {
     background-image: none;
 
     position: relative;
     width: 768px;
+    min-height: 810px;
     padding-left: 120px;
     padding-right: 222px;
+    padding-top: 20px;
   }
 
   .page-main__head {
@@ -49,6 +75,8 @@
     font-weight: 400;
     color: @black;
     text-align: left;
+
+    padding-bottom: 20px;
   }
 
   .page-main__paragraph {
@@ -56,6 +84,27 @@
     line-height: 20px;
     color: @black;
     text-align: left;
+  }
+
+  .page-main__photo {
+    width: 709px;
+    height: 609px;
+    top: 215px;
+  }
+
+  .page-main__button-search {
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 235px;
+
+    width: 245px;
+    height: 54px;
+    padding-top: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
   }
 }
 
@@ -68,12 +117,33 @@
     position: relative;
     width: 1440px;
     min-height: 698px;
+    margin-top: -133px;
+    margin-bottom: 80px;
   }
 
   .page-main__head {
     display: block;
     width: 500px;
     margin: 0;
+    margin-top: 220px;
+    margin-left: 70px;
     text-align: left;
+  }
+
+  .page-main__paragraph {
+    margin-left: 70px;
+  }
+
+  .page-main__button-search {
+    top: 454px;
+    left: 170px;
+  }
+
+  .page-main__photo {
+    width: 552px;
+    height: 499px;
+
+    right: 345px;
+    top: 140px;
   }
 }

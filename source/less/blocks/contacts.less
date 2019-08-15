@@ -1,17 +1,18 @@
 .contacts {
   display: block;
   width: 280px;
-  margin-left: 20px;
-  margin-right: 20px;
   padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
+
   width: 280px;
-  margin: 0 auto;
+
+  margin-bottom: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .contacts__cooperation {
@@ -28,16 +29,24 @@
 
   font-size: 14px;
   line-height: 20px;
-  text-align: right;
+  text-align: left;
   font-family: @default-font;
   font-style: normal;
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    padding-top: 0;
+  }
+
   .contacts__wrapper {
     width: 768px;
     padding-right: 70px;
     padding-left: 70px;
+    margin-top: 65px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
   }
 
   .contacts__cooperation {
@@ -48,12 +57,13 @@
   }
 
   .contacts__address {
-    width: 285px;
+    width: 165px;
 
     font-size: 16px;
+    text-align: right;
   }
 
-  .contacts__map {
+  .contacts iframe {
     width: 768px;
     height: 400px;
     margin: 0;
@@ -65,7 +75,7 @@
     position: relative;
   }
 
-  .contacts__map {
+  .contacts iframe {
     width: 1440px;
   }
 

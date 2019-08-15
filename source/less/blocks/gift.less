@@ -6,8 +6,13 @@
   height: 290px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 40px;
 
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .gift__text {
@@ -26,6 +31,7 @@
 }
 
 .gift__image {
+  path: @white;
   position: absolute;
   top: 62px;
   left: 112px;
