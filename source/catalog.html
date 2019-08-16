@@ -271,13 +271,13 @@
           </div>
           <a class="card__order button" href="order.html">Заказать</a>
         </li>
-        <li class="goods__more card">
+        <li class="goods__more card__more">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/icon-plus.svg">
             <source media="(min-width: 768px)" srcset="img/icon-plus.svg">
-            <img src="img/icon-plus-mobile.svg" width="31" height="31">
+            <img src="img/icon-plus-mobile.svg" width="31" height="31" class="card__more--img">
           </picture>
-          Показать еще 100500 товаров
+          <b class="card__more--title">Показать еще 100500 товаров</b>
           <p class="card__more--text">На самом деле вкусов гораздо больше!</p>
           <a class="card__to-all" href="#">Показать все</a>
         </li>
@@ -285,6 +285,7 @@
     </section>
     <section class="add">
       <h2 class="add__title">Дополнительные товары</h2>
+      <div class="add__block">
       <ul class="add__list">
         <li class="add__item">
           <b class="add__name">Сахарозаменитель</b>
@@ -327,11 +328,12 @@
           <a class="add__order button" href="order.html">Заказать</a>
         </li>
       </ul>
-    </section>
-    <section class="gift">
-      <div class="gift__wrapper">
-        <img class="gift__image" src="img/icon-gift.svg" width="67" height="67" alt="подарок">
-        <b class="gift__text">Закажите все и получите чехол для кота в подарок!</b>
+    <!-- </section>
+    <section class="gift"> -->
+      <div class="add__wrapper">
+        <img class="add__image" src="img/icon-gift.svg" width="67" height="67" alt="подарок">
+        <b class="add__text">Закажите все и получите чехол для кота в подарок!</b>
+      </div>
       </div>
     </section>
 

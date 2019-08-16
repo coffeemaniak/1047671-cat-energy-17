@@ -66,9 +66,19 @@
   background-color: @light-grey;
 }
 
+.card__more--img {
+  fill: #d3d3d3;
+  display: block;
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  opacity: 0.5;
+}
+
 @media (min-width: @tablet-width) {
   .card {
     width: 324px;
+    min-height: 520px;
     margin-bottom: 45px;
 
     background-image: linear-gradient(to bottom, white 10%, @light-grey 10%);
@@ -87,7 +97,6 @@
   }
 
   .card__description--row {
-    min-height: 40px;
     width: 254px;
 
     padding-top: 8px;
@@ -100,6 +109,11 @@
   .card__value {
     font-size: 16px;
     font-family: @default-font;
+    height: 30px;
+  }
+
+  .card__field {
+    text-align: left;
   }
 
   .card__text {
@@ -127,6 +141,46 @@
     align-self: center;
     width: 100%;
     min-height: 205px;
+  }
+
+  .card__more {
+    background-image: none;
+
+    margin-bottom: 46px;
+    margin-top: 49px;
+  }
+
+  .card__more--title {
+    display: block;
+    width: 138px;
+    margin: 0 auto;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: @main-font;
+    text-transform: uppercase;
+  }
+
+  .card__more--text {
+    font-size: 16px;
+    padding-left: 68px;
+    padding-right: 68px;
+    padding-top: 30px;
+    margin-top: 0;
+    margin-bottom: 110px;
+  }
+
+  .card__more--img {
+    padding-top: 56px;
+    padding-bottom: 47px;
+    width: 60px;
+  }
+
+  .card__to-all {
+    width: 250px;
+    height: 44px;
+    margin: 0 auto;
   }
 }
 

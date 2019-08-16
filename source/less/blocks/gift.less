@@ -30,9 +30,33 @@
   text-align: center;
 }
 
-.gift__image {
-  path: @white;
+.gift__image svg {
+  fill: #ffffff;
   position: absolute;
   top: 62px;
   left: 112px;
+}
+
+@media (min-width: @tablet-width) {
+  .gift__wrapper {
+    width: 708px;
+    height: 201px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  .gift__image {
+    margin-left: 90px;
+    margin-top: 60px;
+  }
+
+  .gift__text {
+    text-align: left;
+    margin-left: 344px;
+    margin-bottom: 27px;
+  }
 }
