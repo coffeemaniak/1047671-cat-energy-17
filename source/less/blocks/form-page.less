@@ -505,4 +505,42 @@
   .form-page__send {
     width: 570px;
   }
+
+  .form-page__checkbox {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/icon-tick.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid @light-grey;
+  }
+
+  .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid @light-grey;
+  }
+
+  .form-page__checkbox input[type="checkbox"] {
+    opacity: 0;
+  }
 }
