@@ -6,17 +6,22 @@
   <title>HTML Academy: Кэт энерджи - Подбор программы</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="container">
 
   <header class="page-header">
     <div class="page-header__wrapper">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40" alt="Логотип магазина">
+      <a href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="195" height="40" alt="Логотип магазина">
+        </picture>
+      </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button"><img src="img/icon-mobile-menu.svg" width="26"
-            height="26"></button>
+        <button class="main-nav__toggle" type="button"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
@@ -46,13 +51,16 @@
         </fieldset>
         <fieldset class="form-page__purpose">
           <label>
-            <input class="form-page__purpose--loss" type="radio" name="purpose" value="loss-weight" checked> Похудение
+            <input class="form-page__purpose--loss" type="radio" name="purpose" value="loss-weight" checked> 
+            <span class="form-page__purpose--indicator"></span> Похудение
           </label>
           <label>
-            <input class="form-page__purpose--gain" type="radio" name="purpose" value="gain-weight"> Набор массы
+            <input class="form-page__purpose--gain" type="radio" name="purpose" value="gain-weight"> 
+            <span class="form-page__purpose--indicator"></span> Набор массы
           </label>
           <label>
-            <input class="form-page__purpose--dontknow" type="radio" name="purpose" value="dont-know">Не знаю (нужен ваш
+            <input class="form-page__purpose--dontknow" type="radio" name="purpose" value="dont-know">
+            <span class="form-page__purpose--indicator"></span> Не знаю (нужен ваш
             совет)
           </label>
         </fieldset>
@@ -95,10 +103,10 @@
       </fieldset>
       <button type="submit" class="form-page__send button">Отправить заявку</button>
     </form>
-    <small><sup>*</sup>Обязательные поля</small>
+    <small class="form-page__sup"><sup>*</sup>- Обязательные поля</small>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--inner-page">
         <h3 class="contacts__cooperation">Приглашаем к сотрудничеству диллеров!</h3>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
@@ -162,15 +170,15 @@
       </ul>
     </div>
     <div class="page-footer__copyright">
-      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="30" height="30">
-          <path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2
+        <a class="page-footer__copyright--link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="30" height="30" class="page-footer__copyright--svg">
+            <path fill="#666666" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2
             10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7
             11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8
             5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1
             17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" /></svg>
-      </a>
-    </div>
+        </a>
+      </div>
   </footer>
   <script>
     var navMain = document.querySelector('.main-nav');

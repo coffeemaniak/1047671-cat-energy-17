@@ -1,7 +1,6 @@
 .page-main__wrapper {
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-color: @white;
-  /*background-size: 320px 305px;*/
   background-position: top;
   background-repeat: no-repeat;
 
@@ -10,6 +9,11 @@
   height: 480px;
   padding-top: 26px;
   margin-bottom: 22px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px 306px;
+  }
 }
 
 .page-main__head {
@@ -60,6 +64,7 @@
 @media (min-width: @tablet-width) {
   .page-main__wrapper {
     background-image: none;
+    background-color: @white;
 
     position: relative;
     width: 768px;
@@ -119,6 +124,10 @@
     min-height: 698px;
     margin-top: -133px;
     margin-bottom: 80px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .page-main__head {

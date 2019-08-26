@@ -70,9 +70,11 @@
   margin-top: 40px;
 
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-color: @light-green;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px 290px;
   }
 }
 
@@ -80,7 +82,7 @@
   display: block;
   position: absolute;
   bottom: 40px;
-  left: 60px;
+  left: 50px;
   width: 170px;
 
   font-size: 16px;
@@ -91,9 +93,10 @@
   text-align: center;
 }
 
-.add__image {
-  margin-top: 50px;
-  margin-left: 100px;
+.add__wrapper--img {
+  position: relative;
+  left: 100px;
+  top: 65px;
 }
 
 
@@ -147,7 +150,7 @@
     }
   }
 
-  .add__image {
+  .add__wrapper--img {
     margin-left: 90px;
     margin-top: 60px;
   }

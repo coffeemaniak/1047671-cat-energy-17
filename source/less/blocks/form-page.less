@@ -87,10 +87,6 @@
   margin-bottom: 24px;
 }
 
-// form fieldset:first-child label:nth-child(5) {
-//   font-size: 30px;
-// }
-
 .form-page__purpose {
   border: none;
   border-bottom: 1px solid #cdcdcd;
@@ -107,24 +103,49 @@
 
 .form-page__purpose label {
   display: block;
-  padding-bottom: 13px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  position: relative;
 }
 
 .form-page__purpose input {
-  margin-right: 13px;
+  margin-right: 20px;
 }
 
-// .form-page__purpose--loss {
-//   width: 140px;
-// }
+.form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator,
+.form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose--indicator {
+  margin-right: 13px;
+  cursor: pointer;
 
-// .form-page__purpose--gain {
-//   width: 140px;
-// }
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
 
-// .form-page__purpose--dontknow {
-//   width: 232px;
-// }
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 2px solid @light-grey;
+
+  background-color: transparent;
+}
+
+.form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator::after {
+    content: "\2B24";
+    display: block;
+    position: relative;
+    font-size: 16px;
+    width: 21px;
+    height: 21px;
+    color: @light-green;
+    border-radius: 50%;
+    left: 6.5px;
+    top: 3px;
+}
+
+.form-page__purpose input[type="radio"] {
+  opacity: 0;
+}
 
 .form-page__about-owner {
   border: none;
@@ -144,7 +165,21 @@
 
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 20px;
+  text-transform: none;
+}
+
+.form-page__about-owner--title::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 4px;
+
+  margin: 0;
+  left: 208px;
+  top: -20px;
+
+  background-color: @light-green;
 }
 
 .form-page__about-owner--email {
@@ -153,8 +188,17 @@
 
   margin-bottom: 14px;
   margin-left: 10px;
+  padding-top: 5px;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e6e6e6;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 2px solid black;
+  }
 }
 
 .form-page__about-owner--tel {
@@ -163,8 +207,17 @@
 
   margin-bottom: 30px;
   margin-left: 10px;
+  padding-top: 5px;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e6e6e6;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 2px solid black;
+  }
 }
 
 .form-page__about-owner--email::placeholder,
@@ -192,6 +245,20 @@
   padding-bottom: 35px;
 }
 
+.form-page__comment legend::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 160px;
+  height: 4px;
+
+  margin: 0;
+  left: 138px;
+  top: -12px;
+
+  background-color: @light-green;
+}
+
 .form-page__comment textarea {
   width: 280px;
   height: 150px;
@@ -216,7 +283,6 @@
 }
 
 .form-page__add {
-  // width: 180px;
   display: flex;
   flex-direction: column;
 
@@ -249,12 +315,63 @@
   margin-bottom: 0;
 }
 
+.form-page__checkbox {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.1 15.5' fill='%2368B738'><path d='M20.1 0L7.7 13.3 1 6.1 0 7.2l7.6 8.2.1.1L21 1.2l.1-.1z'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid @light-grey;
+}
+
+.form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: none;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid @light-grey;
+}
+
+.form-page__checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
 .form-page__send {
   font-family: @main-font;
   font-weight: 400;
   margin-left: 20px;
   margin-right: 0;
   padding-top: 0;
+  border: none;
+}
+
+.form-page__sup {
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: @default-font;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
