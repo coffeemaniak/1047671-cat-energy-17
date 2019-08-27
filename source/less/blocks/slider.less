@@ -128,9 +128,20 @@
     color: @light-green;
     left: 43%;
     top: -13px;
-    padding-left: 13px;
-    padding-top: 7px;
+    padding-left: 11px;
+    padding-top: 5px;
     font-size: 11px;
+    border: 2px solid @light-grey;
+    box-shadow: 0 2px 5px 0 #cdcdcd;
+
+    &:hover {
+      box-shadow: 0 3px 6px 0 #cdcdcd;
+    }
+
+    &:active {
+      box-shadow: 0 3px 6px 0 #cdcdcd;
+      border: 2px solid @light-green;
+    }
   }
 
   .slider__name--before,
@@ -148,6 +159,15 @@
 
   .slider__range--scale {
     display: none;
+  }
+
+  .slider__btn--before, 
+  .slider__btn--after {
+    border-bottom: 1px dotted #d8d8d8;
+
+    &:hover {
+      border-bottom: 1px solid #d8d8d8;
+    }
   }
 }
 

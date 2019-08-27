@@ -70,7 +70,19 @@
   margin-left: 10px;
   margin-bottom: 14px;
 
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    outline: 2px solid black;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
+  }
 }
 
 .form-page__about-cat--name::placeholder,
@@ -183,6 +195,7 @@
 }
 
 .form-page__about-owner--email {
+  position: relative;
   width: 220px;
   height: 44px;
 
@@ -190,18 +203,40 @@
   margin-left: 10px;
   padding-top: 5px;
 
-  border: 1px solid #e6e6e6;
+  outline: 1px solid #e6e6e6;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:active {
-    border: 2px solid black;
+    outline: 2px solid black;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
   }
 }
 
+.form-page__about-owner--email-svg {
+  position: absolute;
+  right: 75px;
+  bottom: 75px;
+
+  fill: #4f4f4f;
+}
+
+.form-page__about-owner--email:active .form-page__about-owner--email-svg {
+  fill: #8dc969;
+
+  &--invalid .form-page__about-owner--email-svg {
+    fill: #ff8282;
+  }
+}
+
+
 .form-page__about-owner--tel {
+  position: relative;
   width: 207px;
   height: 44px;
 
@@ -209,14 +244,34 @@
   margin-left: 10px;
   padding-top: 5px;
 
-  border: 1px solid #e6e6e6;
+  outline: 1px solid #e6e6e6;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:active {
-    border: 2px solid black;
+    outline: 2px solid black;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
+  }
+}
+
+.form-page__about-owner--tel-svg {
+  position: absolute;
+  right: 75px;
+  bottom: 15px;
+
+  fill: #4f4f4f;
+}
+
+.form-page__about-owner--tel:active .form-page__about-owner--tel-svg {
+  fill: #8dc969;
+
+  &--invalid .form-page__about-owner--tel-svg {
+    fill: #ff8282;
   }
 }
 

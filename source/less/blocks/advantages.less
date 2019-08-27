@@ -108,19 +108,6 @@
   }
 }
 
-// .advantages__item--leaf,
-// .advantages__item--cook,
-// .advantages__item--fork,
-// .advantages__item--clock {
-//   display: block;
-
-//   width: 60px;
-//   height: 60px;
-//   margin-left: 10px;
-
-//   background-color: @light-green;
-// }
-
 @media (min-width: @tablet-width) {
   .advantages__wrapper {
     flex-direction: row;
@@ -134,13 +121,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    border-bottom: 2px solid @light-grey;
   }
 
   .advantages__item {
+    position: relative;
+
     width: 324px;
     min-height: 230px;
+    margin-top: 60px;
+    margin-bottom: 0;
     padding-left: 0;
     padding-right: 52px;
+    padding-top: 115px;
 
     font-size: 16px;
     line-height: 24px;
@@ -151,7 +145,24 @@
     width: 324px;
     min-height: 230px;
 
-    background-image: url("/source/img/1.png");
+    background: url("../img/1.png") center no-repeat;
+  }
+
+  .advantages__item--two {
+    background: url("../img/2.png") center no-repeat;
+  }
+
+  .advantages__item--three {
+    background: url("../img/3.png") center no-repeat;
+    margin-bottom: 50px;
+  }
+
+  .advantages__item--four {
+    background: url("../img/4.png") center no-repeat;
+  }
+
+  .advantages__item:last-child {
+    margin-bottom: 50px;
   }
 
   .advantages__title {
@@ -159,21 +170,57 @@
     padding-left: 30px;
     margin: 0;
     margin-top: 30px;
-    margin-bottom: 60px;
     font-size: 60px;
   }
 
-  .advantages__item--leaf,
-  .advantages__item--cook,
-  .advantages__item--fork,
-  .advantages__item--clock {
+  .advantages__item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
     width: 82px;
     height: 82px;
-    margin-bottom: 35px;
-    right: 11px;
-    top: 10px;
 
     background-color: @light-green;
+    margin: 0;
+    margin-right: 20px;
+    right: 240px;
+  }
+  
+  .advantages__item--leaf::before {
+    background-size: 82px 82px;
+  
+    @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+      background-size: 82px 82px;
+    }
+  }
+  
+  .advantages__item--fork::before {
+    background-size: 82px 82px;
+  
+    @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+      background-size: 82px 82px;
+    }
+  }
+  
+  .advantages__item--cook::before {
+    background-size: 82px 82px;
+  
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-size: 82px 82px;
+    }
+  }
+  
+  .advantages__item--clock::before {
+    background-size: 82px 82px;
+  
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-size: 82px 82px;
+    }
   }
 }
 

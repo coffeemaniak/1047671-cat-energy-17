@@ -34,45 +34,45 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 400px;
     padding: 0;
     padding-top: 19px;
-    left: -40px;
-    position: relative;
+    padding-right: 30px;
   }
 
   .site-list__item {
     flex-grow: 0;
+    padding-left: 35px;
+
+    font-weight: 400;
 
     border-bottom: 2px solid transparent;
+
+    &--active {
+      border-bottom: 2px solid @light-green;
+    }
   }
+
 
   .site-list__item a {
     border-top: none;
 
     font-size: 18px;
     line-height: 24.86px;
-    font-weight: 400;
 
     color: @black;
   }
 
-  .site-list__item a:not([href]) {
-    border-bottom-color: #68b738;
-  }
-
   .site-list__item a[href] {
     &:hover {
-      color: #707070;
+    opacity: 0.6;
     }
 
     &:visited {
-      color: #b7b7b7;
+      opacity: 0.3;
     }
 
     &:active {
-      color: @black;
-      border-bottom-color: #68b738;
+      border-bottom: 2px solid @light-green;
     }
   }
 }
