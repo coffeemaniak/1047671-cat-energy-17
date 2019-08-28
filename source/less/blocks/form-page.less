@@ -359,6 +359,7 @@
   line-height: 24px;
   font-weight: 400;
   padding-bottom: 30px;
+  text-transform: none;
 }
 
 .form-page__add input {
@@ -433,8 +434,6 @@
   .form-page {
     width: 100%;
     margin: 0 auto;
-    // padding-left: 30px;
-    // padding-right: 30px;
   }
 
   .form-page__title {
@@ -510,6 +509,28 @@
     line-height: 20px;
   }
 
+  .form-page__purpose label {
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+
+  .form-page__purpose input {
+    margin-right: 27px;
+  }
+
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator,
+  .form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose--indicator {
+    width: 41px;
+    height: 41px;
+  }
+
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator::after {
+    content: "\2B24";
+    font-size: 24px;
+    left: 8px;
+    top: 5px;
+  }
+
   .form-page__about-owner {
     padding-left: 70px;
     padding-right: 70px;
@@ -525,11 +546,36 @@
     margin-bottom: 70px;
   }
 
+  .form-page__about-owner--title:after {
+    width: 146px;
+    left: 548px;
+    top: -16px;
+  }
+
+  .form-page__about-owner--title:before {
+    content: "";
+
+    display: block;
+    position: relative;
+    left: -70px;
+    bottom: -25px;
+
+    width: 31px;
+    height: 4px;
+  
+    background-color: @light-green;
+  }
+
   .form-page__about-owner--email {
     width: 552px;
     height: 53px;
 
     margin-bottom: 22px;
+  }
+
+  .form-page__about-owner--email-svg {
+    right: 104px;
+    bottom: -265px;
   }
 
   .form-page__about-owner--tel {
@@ -539,6 +585,11 @@
     margin-bottom: 70px;
   }
 
+  .form-page__about-owner--tel-svg {
+    right: 102px;
+    bottom: -345px;
+  }
+
   .form-page__about-owner--email::placeholder,
   .form-page__about-owner--tel::placeholder {
     font-size: 20px;
@@ -546,8 +597,8 @@
   }
 
   .form-page__comment {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 68px;
+    padding-right: 68px;
   }
 
   .form-page__comment legend {
@@ -558,11 +609,34 @@
     padding: 0;
   }
 
+  .form-page__comment legend::after {
+    width: 480px;
+    left: 216px;
+  }
+
+  .form-page__comment legend:before {
+    content: "";
+    display: block;
+    position: relative;
+    left: -68px;
+    bottom: -27px;
+
+    width: 31px;
+    height: 4px;
+
+    background-color: @light-green;
+  }
+
   .form-page__comment textarea {
     width: 630px;
     height: 175px;
 
     margin-bottom: 70px;
+  }
+
+  .form-page__comment textarea::placeholder {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .form-page__add {
@@ -585,10 +659,47 @@
     margin-bottom: 50px;
   }
 
+  .form-page__add legend:before {
+    content: "";
+    display: block;
+    position: relative;
+    left: -70px;
+    bottom: -24px;
+
+    width: 31px;
+    height: 4px;
+
+    background-color: @light-green;
+  }
+
+  .form-page__add legend:after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 248px;
+    bottom: 14px;
+
+    width: 446px;
+    height: 4px;
+
+    background-color: @light-green;    
+  }
+
   .form-page__add label {
     display: inline-block;
-    width: 236px;
+    width: 310px;
   }
+
+  .form-page__checkbox input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator,
+  .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+    width: 40px;
+    height: 40px;
+  }
+
 
   .form-page__send {
     font-family: @main-font;
@@ -599,8 +710,10 @@
     margin-right: 0;
     padding-top: 17px;
     padding-bottom: 17px;
+    padding-right: 60px;
+    padding-left: 60px;
 
-    height: 52px;
+    min-height: 52px;
   }
 }
 

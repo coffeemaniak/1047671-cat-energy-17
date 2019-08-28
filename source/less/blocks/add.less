@@ -109,8 +109,37 @@
     padding-bottom: 77px;
   }
 
+  .add__title:before {
+    content: "";
+
+    display: block;
+    position: relative;
+    left: -66px;
+    bottom: -24px;
+
+    width: 30px;
+    height: 4px;
+
+    background-color: @light-green;
+  }
+
+  .add__title:after {
+    content: "";
+
+    display: block;
+    position: relative;
+    left: 374px;
+    bottom: 12px;
+
+    width: 328px;
+    height: 4px;
+
+    background-color: @light-green;
+  }
+
   .add__list {
-    width: 768px;
+    width: 708px;
+    margin: 0 auto;
   }
 
   .add__item {
@@ -119,8 +148,11 @@
     flex-wrap: wrap;
     align-items: center;
 
-    padding-left: 68px;
-    padding-right: 68px;
+    padding-left: 38px;
+    padding-right: 38px;
+    border-top: 2px solid @light-grey;
+    border-left: 2px solid @light-grey;
+    border-right: 2px solid @light-grey;
   }
 
   .add__name {
@@ -139,20 +171,17 @@
 
   .add__wrapper {
     width: 708px;
-    height: 201px;
+    height: 200px;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 78px;
 
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px 200px;
     }
-  }
-
-  .add__wrapper--img {
-    margin-left: 90px;
-    margin-top: 60px;
   }
 
   .add__text {
