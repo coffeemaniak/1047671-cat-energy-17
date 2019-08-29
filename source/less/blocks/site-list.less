@@ -79,12 +79,15 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    width: 720px;
     padding-top: 52px;
 
     position: relative;
     z-index: 1;
     background-color: transparent;
+  }
+
+  .site-list__item--active {
+      border-bottom: 2px solid @white;
   }
 
   .site-list__item a {
@@ -95,16 +98,17 @@
 
   .site-list__item a[href] {
     &:hover {
-      color: #c1ddb1;
+      opacity: 0.6;
     }
 
     &:visited {
-      color: #94c377;
+      opacity: 0.3;
     }
 
     &:active {
+      opacity: 1;
       color: @white;
-      border-bottom-color: @white;
+      border-bottom: 2px solid @white;
     }
   }
 

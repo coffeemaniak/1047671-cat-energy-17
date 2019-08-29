@@ -55,13 +55,13 @@
   top: 2px;
 }
 
-.categories__link::after:hover {
+.categories__link:hover::after {
   content: url(../img/icon-right-arrow-verylong.svg);
   width: 35px;
 }
 
 .categories__link:active,
-.categories__link::after:active {
+.categories__link:active::after {
   opacity: 0.3;
 }
 
@@ -176,48 +176,6 @@
     left: 120px;
     top: 44px;
   }
-
-  // .categories__title--slim {
-  //   width: 144px;
-  //   height: auto;
-  //   max-width: 100%;
-  //   position: absolute;
-  //   left: 450px;
-  //   bottom: -100px;
-  // }
-
-  // .categories__title--slim::before {
-  //   content: "";
-  //   display: block;
-  //   width: 202px;
-  //   height: 202px;
-  //   background-color: @light-green;
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   bottom: -115px;
-  //   left: 415px;
-  // }
-
-  // .categories__title--weight {
-  //   width: 270px;
-  //   height: auto;
-  //   max-width: 100%;
-  //   position: absolute;
-  //   left: 360px;
-  //   bottom: -94px;
-  // }
-
-  // .categories__title--weight::before {
-  //   content: "";
-  //   display: block;
-  //   width: 202px;
-  //   height: 202px;
-  //   background-color: @light-green;
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   bottom: -140px;
-  //   left: 400px;
-  // }
 }
 
 @media (min-width: @desktop-width) {
@@ -265,32 +223,44 @@
     bottom: 20px;
   }
 
-  .categories__title--slim::before {
+  .categories__title::before {
     content: "";
-    width: 103px;
-    height: 103px;
+    width: 102px;
+    height: 102px;
     background-color: @light-green;
     border-radius: 50%;
     position: absolute;
     left: 10px;
-    bottom: 10px;
+    bottom: -40px;
   }
 
-  .categories__title--weight {
+  .categories__title--slim::after {
+    content: url("../img/icon-cat-slim.svg");
+    display: block;
+    width: 73px;
+    height: auto;
+    position: absolute;
+    top: -28px;
+    left: 31px;
+  }
+
+  .categories__title--weight::after {
+    content: url("../img/icon-cat-pro.svg");
+    display: block;
     width: 137px;
     height: auto;
-    left: -4px;
-    bottom: 25px;
+    position: absolute;
+    top: 0;
+    left: -5px;
   }
 
-  .categories__title--weight::before {
-    content: "";
-    width: 103px;
-    height: 103px;
-    background-color: @light-green;
-    border-radius: 50%;
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
+  .categories__link:hover::after {
+    content: url(../img/icon-right-arrow-verylong.svg);
+    width: 35px;
+  }
+  
+  .categories__link:active,
+  .categories__link:active::after {
+    opacity: 0.3;
   }
 }
