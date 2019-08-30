@@ -109,7 +109,7 @@
     padding-bottom: 77px;
   }
 
-  .add__title:before {
+  .add__title::before {
     content: "";
 
     display: block;
@@ -123,7 +123,7 @@
     background-color: @light-green;
   }
 
-  .add__title:after {
+  .add__title::after {
     content: "";
 
     display: block;
@@ -214,6 +214,15 @@
 
   .add__order {
     width: 245px;
+
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      background-color: #5eaa2f;
+      opacity: 0.3;
+    }
   }
 
   .add__description {

@@ -62,7 +62,7 @@
   background-size: 60px 60px;
 
   @media (min-resolution: @retina-dpi),
-  (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
     background-image: url("../img/advantage-leaf@2x.png");
     background-size: 60px 60px;
   }
@@ -76,7 +76,7 @@
   background-size: 60px 60px;
 
   @media (min-resolution: @retina-dpi),
-  (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
     background-image: url("../img/advantage-dining@2x.png");
     background-size: 60px 60px;
   }
@@ -177,8 +177,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 
     width: 82px;
     height: 82px;
@@ -188,36 +188,35 @@
     margin-right: 20px;
     right: 240px;
   }
-  
+
   .advantages__item--leaf::before {
     background-size: 82px 82px;
-  
+
     @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+      (min-resolution: @retina-dppx) {
       background-size: 82px 82px;
     }
   }
-  
+
   .advantages__item--fork::before {
     background-size: 82px 82px;
-  
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
-      background-size: 82px 82px;
-    }
-  }
-  
-  .advantages__item--cook::before {
-    background-size: 82px 82px;
-  
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-size: 82px 82px;
     }
   }
-  
+
+  .advantages__item--cook::before {
+    background-size: 82px 82px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-size: 82px 82px;
+    }
+  }
+
   .advantages__item--clock::before {
     background-size: 82px 82px;
-  
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-size: 82px 82px;
     }
@@ -236,6 +235,7 @@
 
   .advantages__list {
     margin: 0 auto;
+    border-bottom: none;
   }
 
   .advantages__item {
@@ -252,33 +252,31 @@
 
   .advantages__item--leaf::before {
     background-size: 62px 62px;
-  
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
-      background-size: 62px 62px;
-    }
-  }
-  
-  .advantages__item--fork::before {
-    background-size: 62px 62px;
-  
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
-      background-size: 62px 62px;
-    }
-  }
-  
-  .advantages__item--cook::before {
-    background-size: 62px 62px;
-  
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-size: 62px 62px;
     }
   }
-  
+
+  .advantages__item--fork::before {
+    background-size: 62px 62px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-size: 62px 62px;
+    }
+  }
+
+  .advantages__item--cook::before {
+    background-size: 62px 62px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-size: 62px 62px;
+    }
+  }
+
   .advantages__item--clock::before {
     background-size: 62px 62px;
-  
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-size: 62px 62px;
     }

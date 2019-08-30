@@ -1,7 +1,5 @@
 .form-page {
   width: 100%;
-  // padding-left: 20px;
-  // padding-right: 20px;
 }
 
 .form-page__title {
@@ -28,7 +26,6 @@
 }
 
 .form-page__request {
-  // width: 280px;
   padding: 0;
   margin: 0;
 }
@@ -76,7 +73,7 @@
     outline: 1px solid #cdcdcd;
   }
 
-  &:active {
+  &:focus {
     outline: 2px solid black;
   }
 
@@ -143,16 +140,16 @@
 }
 
 .form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator::after {
-    content: "\2B24";
-    display: block;
-    position: relative;
-    font-size: 16px;
-    width: 21px;
-    height: 21px;
-    color: @light-green;
-    border-radius: 50%;
-    left: 6.5px;
-    top: 3px;
+  content: "\2B24";
+  display: block;
+  position: relative;
+  font-size: 16px;
+  width: 21px;
+  height: 21px;
+  color: @light-green;
+  border-radius: 50%;
+  left: 6.5px;
+  top: 3px;
 }
 
 .form-page__purpose input[type="radio"] {
@@ -194,8 +191,11 @@
   background-color: @light-green;
 }
 
-.form-page__about-owner--email {
+.form-page__about-owner--input {
   position: relative;
+}
+
+.form-page__about-owner--email {
   width: 220px;
   height: 44px;
 
@@ -209,7 +209,7 @@
     outline: 1px solid #cdcdcd;
   }
 
-  &:active {
+  &:focus {
     outline: 2px solid black;
   }
 
@@ -220,23 +220,22 @@
 
 .form-page__about-owner--email-svg {
   position: absolute;
-  right: 75px;
-  bottom: 75px;
+  top: 4px;
+  left: 246px;
 
   fill: #4f4f4f;
 }
 
-.form-page__about-owner--email:active .form-page__about-owner--email-svg {
+.form-page__about-owner--email:active .form-page__about-owner--email-svg path {
   fill: #8dc969;
 
-  &--invalid .form-page__about-owner--email-svg {
+  &--invalid .form-page__about-owner--email-svg path {
     fill: #ff8282;
   }
 }
 
 
 .form-page__about-owner--tel {
-  position: relative;
   width: 207px;
   height: 44px;
 
@@ -250,7 +249,7 @@
     outline: 1px solid #cdcdcd;
   }
 
-  &:active {
+  &:focus {
     outline: 2px solid black;
   }
 
@@ -261,16 +260,16 @@
 
 .form-page__about-owner--tel-svg {
   position: absolute;
-  right: 75px;
-  bottom: 15px;
+  top: 0;
+  left: 247px;
 
   fill: #4f4f4f;
 }
 
-.form-page__about-owner--tel:active .form-page__about-owner--tel-svg {
+.form-page__about-owner--tel:active .form-page__about-owner--tel-svg path {
   fill: #8dc969;
 
-  &--invalid .form-page__about-owner--tel-svg {
+  &--invalid .form-page__about-owner--tel-svg path {
     fill: #ff8282;
   }
 }
@@ -323,7 +322,15 @@
 
   margin-bottom: 30px;
 
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid black;
+  }
 }
 
 .form-page__comment textarea::placeholder {
@@ -546,13 +553,13 @@
     margin-bottom: 70px;
   }
 
-  .form-page__about-owner--title:after {
+  .form-page__about-owner--title::after {
     width: 146px;
     left: 548px;
     top: -16px;
   }
 
-  .form-page__about-owner--title:before {
+  .form-page__about-owner--title::before {
     content: "";
 
     display: block;
@@ -562,8 +569,12 @@
 
     width: 31px;
     height: 4px;
-  
+
     background-color: @light-green;
+  }
+
+  .form-page__about-owner--input {
+    position: relative;
   }
 
   .form-page__about-owner--email {
@@ -574,8 +585,8 @@
   }
 
   .form-page__about-owner--email-svg {
-    right: 104px;
-    bottom: -265px;
+    top: 5px;
+    left: 569px;
   }
 
   .form-page__about-owner--tel {
@@ -586,8 +597,7 @@
   }
 
   .form-page__about-owner--tel-svg {
-    right: 102px;
-    bottom: -345px;
+    left: 574px;
   }
 
   .form-page__about-owner--email::placeholder,
@@ -614,7 +624,7 @@
     left: 216px;
   }
 
-  .form-page__comment legend:before {
+  .form-page__comment legend::before {
     content: "";
     display: block;
     position: relative;
@@ -640,10 +650,6 @@
   }
 
   .form-page__add {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-
     display: block;
     padding-left: 70px;
     padding-right: 70px;
@@ -659,7 +665,7 @@
     margin-bottom: 50px;
   }
 
-  .form-page__add legend:before {
+  .form-page__add legend::before {
     content: "";
     display: block;
     position: relative;
@@ -672,7 +678,7 @@
     background-color: @light-green;
   }
 
-  .form-page__add legend:after {
+  .form-page__add legend::after {
     content: "";
     display: block;
     position: relative;
@@ -681,8 +687,7 @@
 
     width: 446px;
     height: 4px;
-
-    background-color: @light-green;    
+    background-color: @light-green;
   }
 
   .form-page__add label {
@@ -765,17 +770,50 @@
     padding-right: 110px;
   }
 
+  .form-page__about-owner--title::before {
+    width: 70px;
+    left: -110px;
+  }
+
+  .form-page__about-owner--title::after {
+    width: 779px;
+  }
+
+  .form-page__about-owner--input {
+    position: relative;
+  }
+
   .form-page__about-owner--email {
     width: 487px;
+  }
+
+  .form-page__about-owner--email-svg {
+    position: absolute;
+    top: 13px;
+    left: 516px;
   }
 
   .form-page__about-owner--tel {
     width: 470px;
   }
 
+  .form-page__about-owner--tel-svg {
+    left: 514px;
+    top: 8px;
+  }
+
   .form-page__comment {
     padding-left: 110px;
     padding-right: 110px;
+  }
+
+  .form-page__comment legend::after {
+    width: 1113px;
+  }
+
+  .form-page__comment legend::before {
+    width: 70px;
+    left: -110px;
   }
 
   .form-page__comment textarea {
@@ -787,8 +825,28 @@
     padding-right: 110px;
   }
 
+  .form-page__add legend::before {
+    width: 70px;
+    left: -109px;
+  }
+
+  .form-page__add legend::after {
+    width: 1079px;
+  }
+
   .form-page__send {
     width: 570px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      background-color: #5eaa2f;
+      opacity: 0.3;
+    }
   }
 
   .form-page__checkbox {
@@ -799,11 +857,6 @@
 
   .form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator {
     position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icon-tick.svg");
-    background-position: center;
-    background-repeat: no-repeat;
 
     width: 40px;
     height: 40px;
@@ -827,5 +880,9 @@
 
   .form-page__checkbox input[type="checkbox"] {
     opacity: 0;
+  }
+
+  .form-page__add label {
+    width: 300px;
   }
 }
