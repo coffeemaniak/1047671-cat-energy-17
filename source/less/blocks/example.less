@@ -195,15 +195,24 @@
     display: flex;
     justify-content: space-between;
     width: 1440px;
+    min-height: 660px;
     padding-left: 110px;
     padding-right: 110px;
 
-    background-image: linear-gradient(to bottom, @white 190px, @light-grey 190px);
+    background-image: linear-gradient(to bottom, @white 180px, @light-grey 180px);
+  }
+
+  .example__wrapper {
+    width: 433px;
+    display: block;
   }
 
   .example__slider {
-    width: 650px;
+    width: 610px;
     min-height: 660px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   .example__weight,
