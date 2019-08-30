@@ -1,7 +1,5 @@
 .form-page {
   width: 100%;
-  // padding-left: 20px;
-  // padding-right: 20px;
 }
 
 .form-page__title {
@@ -28,7 +26,6 @@
 }
 
 .form-page__request {
-  // width: 280px;
   padding: 0;
   margin: 0;
 }
@@ -70,7 +67,19 @@
   margin-left: 10px;
   margin-bottom: 14px;
 
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid black;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
+  }
 }
 
 .form-page__about-cat--name::placeholder,
@@ -86,10 +95,6 @@
 .form-page__about-cat label:last-child input {
   margin-bottom: 24px;
 }
-
-// form fieldset:first-child label:nth-child(5) {
-//   font-size: 30px;
-// }
 
 .form-page__purpose {
   border: none;
@@ -107,24 +112,49 @@
 
 .form-page__purpose label {
   display: block;
-  padding-bottom: 13px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  position: relative;
 }
 
 .form-page__purpose input {
-  margin-right: 13px;
+  margin-right: 20px;
 }
 
-// .form-page__purpose--loss {
-//   width: 140px;
-// }
+.form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator,
+.form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose--indicator {
+  margin-right: 13px;
+  cursor: pointer;
 
-// .form-page__purpose--gain {
-//   width: 140px;
-// }
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
 
-// .form-page__purpose--dontknow {
-//   width: 232px;
-// }
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 2px solid @light-grey;
+
+  background-color: transparent;
+}
+
+.form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator::after {
+  content: "\2B24";
+  display: block;
+  position: relative;
+  font-size: 16px;
+  width: 21px;
+  height: 21px;
+  color: @light-green;
+  border-radius: 50%;
+  left: 6.5px;
+  top: 3px;
+}
+
+.form-page__purpose input[type="radio"] {
+  opacity: 0;
+}
 
 .form-page__about-owner {
   border: none;
@@ -144,7 +174,25 @@
 
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 20px;
+  text-transform: none;
+}
+
+.form-page__about-owner--title::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 4px;
+
+  margin: 0;
+  left: 208px;
+  top: -20px;
+
+  background-color: @light-green;
+}
+
+.form-page__about-owner--input {
+  position: relative;
 }
 
 .form-page__about-owner--email {
@@ -153,9 +201,39 @@
 
   margin-bottom: 14px;
   margin-left: 10px;
+  padding-top: 5px;
 
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #e6e6e6;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid black;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
+  }
 }
+
+.form-page__about-owner--email-svg {
+  position: absolute;
+  top: 4px;
+  left: 246px;
+
+  fill: #4f4f4f;
+}
+
+.form-page__about-owner--email:active .form-page__about-owner--email-svg path {
+  fill: #8dc969;
+
+  &--invalid .form-page__about-owner--email-svg path {
+    fill: #ff8282;
+  }
+}
+
 
 .form-page__about-owner--tel {
   width: 207px;
@@ -163,8 +241,37 @@
 
   margin-bottom: 30px;
   margin-left: 10px;
+  padding-top: 5px;
 
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #e6e6e6;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid black;
+  }
+
+  &--invalid {
+    outline: 2px solid #ff8282;
+  }
+}
+
+.form-page__about-owner--tel-svg {
+  position: absolute;
+  top: 0;
+  left: 247px;
+
+  fill: #4f4f4f;
+}
+
+.form-page__about-owner--tel:active .form-page__about-owner--tel-svg path {
+  fill: #8dc969;
+
+  &--invalid .form-page__about-owner--tel-svg path {
+    fill: #ff8282;
+  }
 }
 
 .form-page__about-owner--email::placeholder,
@@ -192,6 +299,20 @@
   padding-bottom: 35px;
 }
 
+.form-page__comment legend::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 160px;
+  height: 4px;
+
+  margin: 0;
+  left: 138px;
+  top: -12px;
+
+  background-color: @light-green;
+}
+
 .form-page__comment textarea {
   width: 280px;
   height: 150px;
@@ -201,7 +322,15 @@
 
   margin-bottom: 30px;
 
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid black;
+  }
 }
 
 .form-page__comment textarea::placeholder {
@@ -216,7 +345,6 @@
 }
 
 .form-page__add {
-  // width: 180px;
   display: flex;
   flex-direction: column;
 
@@ -238,6 +366,7 @@
   line-height: 24px;
   font-weight: 400;
   padding-bottom: 30px;
+  text-transform: none;
 }
 
 .form-page__add input {
@@ -249,20 +378,69 @@
   margin-bottom: 0;
 }
 
+.form-page__checkbox {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.1 15.5' fill='%2368B738'><path d='M20.1 0L7.7 13.3 1 6.1 0 7.2l7.6 8.2.1.1L21 1.2l.1-.1z'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid @light-grey;
+}
+
+.form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: none;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid @light-grey;
+}
+
+.form-page__checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
 .form-page__send {
   font-family: @main-font;
   font-weight: 400;
   margin-left: 20px;
   margin-right: 0;
   padding-top: 0;
+  border: none;
+}
+
+.form-page__sup {
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: @default-font;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .form-page {
     width: 100%;
     margin: 0 auto;
-    // padding-left: 30px;
-    // padding-right: 30px;
   }
 
   .form-page__title {
@@ -338,6 +516,28 @@
     line-height: 20px;
   }
 
+  .form-page__purpose label {
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+
+  .form-page__purpose input {
+    margin-right: 27px;
+  }
+
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator,
+  .form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose--indicator {
+    width: 41px;
+    height: 41px;
+  }
+
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator::after {
+    content: "\2B24";
+    font-size: 24px;
+    left: 8px;
+    top: 5px;
+  }
+
   .form-page__about-owner {
     padding-left: 70px;
     padding-right: 70px;
@@ -353,11 +553,40 @@
     margin-bottom: 70px;
   }
 
+  .form-page__about-owner--title::after {
+    width: 146px;
+    left: 548px;
+    top: -16px;
+  }
+
+  .form-page__about-owner--title::before {
+    content: "";
+
+    display: block;
+    position: relative;
+    left: -70px;
+    bottom: -25px;
+
+    width: 31px;
+    height: 4px;
+
+    background-color: @light-green;
+  }
+
+  .form-page__about-owner--input {
+    position: relative;
+  }
+
   .form-page__about-owner--email {
     width: 552px;
     height: 53px;
 
     margin-bottom: 22px;
+  }
+
+  .form-page__about-owner--email-svg {
+    top: 5px;
+    left: 569px;
   }
 
   .form-page__about-owner--tel {
@@ -367,6 +596,10 @@
     margin-bottom: 70px;
   }
 
+  .form-page__about-owner--tel-svg {
+    left: 574px;
+  }
+
   .form-page__about-owner--email::placeholder,
   .form-page__about-owner--tel::placeholder {
     font-size: 20px;
@@ -374,8 +607,8 @@
   }
 
   .form-page__comment {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 68px;
+    padding-right: 68px;
   }
 
   .form-page__comment legend {
@@ -386,6 +619,24 @@
     padding: 0;
   }
 
+  .form-page__comment legend::after {
+    width: 480px;
+    left: 216px;
+  }
+
+  .form-page__comment legend::before {
+    content: "";
+    display: block;
+    position: relative;
+    left: -68px;
+    bottom: -27px;
+
+    width: 31px;
+    height: 4px;
+
+    background-color: @light-green;
+  }
+
   .form-page__comment textarea {
     width: 630px;
     height: 175px;
@@ -393,11 +644,12 @@
     margin-bottom: 70px;
   }
 
-  .form-page__add {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
+  .form-page__comment textarea::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
+  .form-page__add {
     display: block;
     padding-left: 70px;
     padding-right: 70px;
@@ -413,10 +665,46 @@
     margin-bottom: 50px;
   }
 
+  .form-page__add legend::before {
+    content: "";
+    display: block;
+    position: relative;
+    left: -70px;
+    bottom: -24px;
+
+    width: 31px;
+    height: 4px;
+
+    background-color: @light-green;
+  }
+
+  .form-page__add legend::after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 248px;
+    bottom: 14px;
+
+    width: 446px;
+    height: 4px;
+    background-color: @light-green;
+  }
+
   .form-page__add label {
     display: inline-block;
-    width: 236px;
+    width: 310px;
   }
+
+  .form-page__checkbox input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator,
+  .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+    width: 40px;
+    height: 40px;
+  }
+
 
   .form-page__send {
     font-family: @main-font;
@@ -427,8 +715,10 @@
     margin-right: 0;
     padding-top: 17px;
     padding-bottom: 17px;
+    padding-right: 60px;
+    padding-left: 60px;
 
-    height: 52px;
+    min-height: 52px;
   }
 }
 
@@ -480,17 +770,50 @@
     padding-right: 110px;
   }
 
+  .form-page__about-owner--title::before {
+    width: 70px;
+    left: -110px;
+  }
+
+  .form-page__about-owner--title::after {
+    width: 779px;
+  }
+
+  .form-page__about-owner--input {
+    position: relative;
+  }
+
   .form-page__about-owner--email {
     width: 487px;
+  }
+
+  .form-page__about-owner--email-svg {
+    position: absolute;
+    top: 13px;
+    left: 516px;
   }
 
   .form-page__about-owner--tel {
     width: 470px;
   }
 
+  .form-page__about-owner--tel-svg {
+    left: 514px;
+    top: 8px;
+  }
+
   .form-page__comment {
     padding-left: 110px;
     padding-right: 110px;
+  }
+
+  .form-page__comment legend::after {
+    width: 1113px;
+  }
+
+  .form-page__comment legend::before {
+    width: 70px;
+    left: -110px;
   }
 
   .form-page__comment textarea {
@@ -502,8 +825,28 @@
     padding-right: 110px;
   }
 
+  .form-page__add legend::before {
+    width: 70px;
+    left: -109px;
+  }
+
+  .form-page__add legend::after {
+    width: 1079px;
+  }
+
   .form-page__send {
     width: 570px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      background-color: #5eaa2f;
+      opacity: 0.3;
+    }
   }
 
   .form-page__checkbox {
@@ -514,11 +857,6 @@
 
   .form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator {
     position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icon-tick.svg");
-    background-position: center;
-    background-repeat: no-repeat;
 
     width: 40px;
     height: 40px;
@@ -542,5 +880,9 @@
 
   .form-page__checkbox input[type="checkbox"] {
     opacity: 0;
+  }
+
+  .form-page__add label {
+    width: 300px;
   }
 }
