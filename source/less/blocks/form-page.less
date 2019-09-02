@@ -45,21 +45,21 @@
   text-transform: uppercase;
 }
 
-.form-page__about-cat--name {
+.form-page__cat-name {
   width: 230px;
 }
 
-.form-page__about-cat--weight {
+.form-page__cat-weght {
   width: 205px;
 }
 
-.form-page__about-cat--age {
+.foarm-page__cat-age {
   width: 172px;
 }
 
-.form-page__about-cat--name,
-.form-page__about-cat--weight,
-.form-page__about-cat--age {
+.form-page__cat-name,
+.form-page__cat-weght,
+.foarm-page__cat-age {
   padding-top: 13px;
   padding-bottom: 9px;
   padding-left: 15px;
@@ -82,9 +82,9 @@
   }
 }
 
-.form-page__about-cat--name::placeholder,
-.form-page__about-cat--weight::placeholder,
-.form-page__about-cat--age::placeholder {
+.form-page__cat-name::placeholder,
+.form-page__cat-weght::placeholder,
+.foarm-page__cat-age::placeholder {
   font-size: 16px;
   line-height: 18px;
   color: #444444;
@@ -121,8 +121,8 @@
   margin-right: 20px;
 }
 
-.form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator,
-.form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose--indicator {
+.form-page__purpose input[type="radio"]:checked + .form-page__purpose-indicator,
+.form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose-indicator {
   margin-right: 13px;
   cursor: pointer;
 
@@ -139,7 +139,7 @@
   background-color: transparent;
 }
 
-.form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator::after {
+.form-page__purpose input[type="radio"]:checked + .form-page__purpose-indicator::after {
   content: "\2B24";
   display: block;
   position: relative;
@@ -167,7 +167,7 @@
   padding-bottom: 0;
 }
 
-.form-page__about-owner--title {
+.form-page__owner-title {
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -177,7 +177,7 @@
   text-transform: none;
 }
 
-.form-page__about-owner--title::after {
+.form-page__owner-title::after {
   content: "";
   display: block;
   position: relative;
@@ -191,11 +191,11 @@
   background-color: @light-green;
 }
 
-.form-page__about-owner--input {
+.form-page__owner-input {
   position: relative;
 }
 
-.form-page__about-owner--email {
+.form-page__owner-email {
   width: 220px;
   height: 44px;
 
@@ -218,7 +218,7 @@
   }
 }
 
-.form-page__about-owner--email-svg {
+.form-page__owner-email-svg {
   position: absolute;
   top: 4px;
   left: 246px;
@@ -226,16 +226,16 @@
   fill: #4f4f4f;
 }
 
-.form-page__about-owner--email:active .form-page__about-owner--email-svg path {
+.form-page__owner-email:active .form-page__owner-email-svg path {
   fill: #8dc969;
 
-  &--invalid .form-page__about-owner--email-svg path {
+  &--invalid .form-page__owner-email-svg path {
     fill: #ff8282;
   }
 }
 
 
-.form-page__about-owner--tel {
+.form-page__owner-tel {
   width: 207px;
   height: 44px;
 
@@ -258,7 +258,7 @@
   }
 }
 
-.form-page__about-owner--tel-svg {
+.form-page__owner-tel-svg {
   position: absolute;
   top: 0;
   left: 247px;
@@ -266,16 +266,16 @@
   fill: #4f4f4f;
 }
 
-.form-page__about-owner--tel:active .form-page__about-owner--tel-svg path {
+.form-page__owner-tel:active .form-page__owner-tel-svg path {
   fill: #8dc969;
 
-  &--invalid .form-page__about-owner--tel-svg path {
+  &--invalid .form-page__owner-tel-svg path {
     fill: #ff8282;
   }
 }
 
-.form-page__about-owner--email::placeholder,
-.form-page__about-owner--tel::placeholder {
+.form-page__owner-email::placeholder,
+.form-page__owner-tel::placeholder {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -384,7 +384,7 @@
   padding: 10px;
 }
 
-.form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator {
+.form-page__checkbox input[type="checkbox"]:checked + .form-page__indicator {
   position: absolute;
   top: 0;
   left: 0;
@@ -398,7 +398,7 @@
   border: 2px solid @light-grey;
 }
 
-.form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+.form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__indicator {
   position: absolute;
   top: 0;
   left: 0;
@@ -472,33 +472,33 @@
     border-bottom: none;
   }
 
-  .form-page__about-cat--name {
+  .form-page__cat-name {
     width: 572px;
   }
 
-  .form-page__about-cat--name,
-  .form-page__about-cat--weight,
-  .form-page__about-cat--age {
+  .form-page__cat-name,
+  .form-page__cat-weght,
+  .foarm-page__cat-age {
     margin-bottom: 22px;
     padding-top: 16px;
     padding-bottom: 12px;
     padding-left: 20px;
   }
 
-  .form-page__about-cat--name::placeholder,
-  .form-page__about-cat--weight::placeholder,
-  .form-page__about-cat--age::placeholder {
+  .form-page__cat-name::placeholder,
+  .form-page__cat-weght::placeholder,
+  .foarm-page__cat-age::placeholder {
     font-size: 20px;
     line-height: 20px;
   }
 
-  .form-page__about-cat--weight {
+  .form-page__cat-weght {
     width: 540px;
 
     margin-bottom: 22px;
   }
 
-  .form-page__about-cat--age {
+  .foarm-page__cat-age {
     width: 497px;
 
     margin-bottom: 73px;
@@ -525,13 +525,13 @@
     margin-right: 27px;
   }
 
-  .form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator,
-  .form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose--indicator {
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose-indicator,
+  .form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose-indicator {
     width: 41px;
     height: 41px;
   }
 
-  .form-page__purpose input[type="radio"]:checked + .form-page__purpose--indicator::after {
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose-indicator::after {
     content: "\2B24";
     font-size: 24px;
     left: 8px;
@@ -546,20 +546,20 @@
     line-height: 20px;
   }
 
-  .form-page__about-owner--title {
+  .form-page__owner-title {
     font-size: 36px;
     line-height: 36px;
 
     margin-bottom: 70px;
   }
 
-  .form-page__about-owner--title::after {
+  .form-page__owner-title::after {
     width: 146px;
     left: 548px;
     top: -16px;
   }
 
-  .form-page__about-owner--title::before {
+  .form-page__owner-title::before {
     content: "";
 
     display: block;
@@ -573,35 +573,35 @@
     background-color: @light-green;
   }
 
-  .form-page__about-owner--input {
+  .form-page__owner-input {
     position: relative;
   }
 
-  .form-page__about-owner--email {
+  .form-page__owner-email {
     width: 552px;
     height: 53px;
 
     margin-bottom: 22px;
   }
 
-  .form-page__about-owner--email-svg {
+  .form-page__owner-email-svg {
     top: 5px;
     left: 569px;
   }
 
-  .form-page__about-owner--tel {
+  .form-page__owner-tel {
     width: 536px;
     height: 53px;
 
     margin-bottom: 70px;
   }
 
-  .form-page__about-owner--tel-svg {
+  .form-page__owner-tel-svg {
     left: 574px;
   }
 
-  .form-page__about-owner--email::placeholder,
-  .form-page__about-owner--tel::placeholder {
+  .form-page__owner-email::placeholder,
+  .form-page__owner-tel::placeholder {
     font-size: 20px;
     line-height: 20px;
   }
@@ -699,8 +699,8 @@
     margin-right: 10px;
   }
 
-  .form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator,
-  .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+  .form-page__checkbox input[type="checkbox"]:checked + .form-page__indicator,
+  .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__indicator {
     width: 40px;
     height: 40px;
   }
@@ -746,15 +746,15 @@
     padding-right: 0;
   }
 
-  .form-page__about-cat--name {
+  .form-page__cat-name {
     width: 506px;
   }
 
-  .form-page__about-cat--weight {
+  .form-page__cat-weght {
     width: 475px;
   }
 
-  .form-page__about-cat--age {
+  .foarm-page__cat-age {
     width: 436px;
   }
 
@@ -770,34 +770,34 @@
     padding-right: 110px;
   }
 
-  .form-page__about-owner--title::before {
+  .form-page__owner-title::before {
     width: 70px;
     left: -110px;
   }
 
-  .form-page__about-owner--title::after {
+  .form-page__owner-title::after {
     width: 779px;
   }
 
-  .form-page__about-owner--input {
+  .form-page__owner-input {
     position: relative;
   }
 
-  .form-page__about-owner--email {
+  .form-page__owner-email {
     width: 487px;
   }
 
-  .form-page__about-owner--email-svg {
+  .form-page__owner-email-svg {
     position: absolute;
     top: 13px;
     left: 516px;
   }
 
-  .form-page__about-owner--tel {
+  .form-page__owner-tel {
     width: 470px;
   }
 
-  .form-page__about-owner--tel-svg {
+  .form-page__owner-tel-svg {
     left: 514px;
     top: 8px;
   }
@@ -855,7 +855,7 @@
     padding: 10px;
   }
 
-  .form-page__checkbox input[type="checkbox"]:checked + .form-page__checkbox--indicator {
+  .form-page__checkbox input[type="checkbox"]:checked + .form-page__indicator {
     position: absolute;
 
     width: 40px;
@@ -864,7 +864,7 @@
     border: 2px solid @light-grey;
   }
 
-  .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__checkbox--indicator {
+  .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__indicator {
     position: absolute;
     top: 0;
     left: 0;
