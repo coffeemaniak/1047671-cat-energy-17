@@ -105,6 +105,14 @@
 
   .page-footer__name {
     width: 245px;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .page-footer__social {
@@ -113,5 +121,28 @@
 
   .page-footer__copyright {
     width: 245px;
+  }
+
+  .page-footer__link:active {
+    opacity: 0.6;
+  }
+
+  .page-footer__svg {
+    path {
+      fill: #666666;
+    }
+
+    &:hover {
+      path {
+        fill: @light-green;
+      }
+    }
+
+    &:active {
+      path {
+        fill: @light-green;
+        opacity: 0.6;
+      }
+    }
   }
 }

@@ -49,17 +49,17 @@
   width: 230px;
 }
 
-.form-page__cat-weght {
+.form-page__cat-weight {
   width: 205px;
 }
 
-.foarm-page__cat-age {
+.form-page__cat-age {
   width: 172px;
 }
 
 .form-page__cat-name,
-.form-page__cat-weght,
-.foarm-page__cat-age {
+.form-page__cat-weight,
+.form-page__cat-age {
   padding-top: 13px;
   padding-bottom: 9px;
   padding-left: 15px;
@@ -83,8 +83,8 @@
 }
 
 .form-page__cat-name::placeholder,
-.form-page__cat-weght::placeholder,
-.foarm-page__cat-age::placeholder {
+.form-page__cat-weight::placeholder,
+.form-page__cat-age::placeholder {
   font-size: 16px;
   line-height: 18px;
   color: #444444;
@@ -477,8 +477,8 @@
   }
 
   .form-page__cat-name,
-  .form-page__cat-weght,
-  .foarm-page__cat-age {
+  .form-page__cat-weight,
+  .form-page__cat-age {
     margin-bottom: 22px;
     padding-top: 16px;
     padding-bottom: 12px;
@@ -486,19 +486,19 @@
   }
 
   .form-page__cat-name::placeholder,
-  .form-page__cat-weght::placeholder,
-  .foarm-page__cat-age::placeholder {
+  .form-page__cat-weight::placeholder,
+  .form-page__cat-age::placeholder {
     font-size: 20px;
     line-height: 20px;
   }
 
-  .form-page__cat-weght {
+  .form-page__cat-weight {
     width: 540px;
 
     margin-bottom: 22px;
   }
 
-  .foarm-page__cat-age {
+  .form-page__cat-age {
     width: 497px;
 
     margin-bottom: 73px;
@@ -725,6 +725,9 @@
 @media (min-width: @desktop-width) {
   .form-page__title {
     padding-left: 110px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .form-page__description {
@@ -740,7 +743,7 @@
   }
 
   .form-page__about-cat {
-    width: 570px;
+    width: 580px;
     margin: 0;
     padding-left: 0;
     padding-right: 0;
@@ -748,18 +751,56 @@
 
   .form-page__cat-name {
     width: 506px;
+    margin-top: -8px;
+    margin-left: 20px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    padding-left: 18px;
   }
 
-  .form-page__cat-weght {
+  .form-page__cat-weight {
     width: 475px;
+    margin-left: 20px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    padding-left: 18px;
   }
 
-  .foarm-page__cat-age {
-    width: 436px;
+  .form-page__cat-age {
+    width: 432px;
+    margin-left: 20px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    padding-left: 18px;
   }
 
   .form-page__purpose {
     width: 570px;
+    padding-left: 30px;
+    margin-bottom: 35px;
+  }
+
+  .form-page__purpose input {
+    margin-right: 40px;
+  }
+
+  .form-page__purpose label {
+    padding-bottom: 25px;
+  }
+
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose-indicator,
+  .form-page__purpose input[type="radio"]:not(:checked) + .form-page__purpose-indicator {
+    &:hover {
+      border: 2px solid #bababa;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
+  .form-page__purpose input[type="radio"]:checked + .form-page__purpose-indicator::after {
+    top: 6px;
   }
 
   .form-page__about-owner {
@@ -768,6 +809,11 @@
 
     padding-left: 110px;
     padding-right: 110px;
+  }
+
+  .form-page__owner-title {
+    padding-top: 25px;
+    padding-bottom: 0;
   }
 
   .form-page__owner-title::before {
@@ -781,25 +827,31 @@
 
   .form-page__owner-input {
     position: relative;
+    top: -5px;
   }
 
   .form-page__owner-email {
     width: 487px;
+    margin-left: 20px;
   }
 
   .form-page__owner-email-svg {
     position: absolute;
-    top: 13px;
-    left: 516px;
+    top: 17px;
+    left: 535px;
+    width: 15px;
+    height: 15px;
   }
 
   .form-page__owner-tel {
     width: 470px;
+    margin-left: 20px;
+    margin-bottom: 55px;
   }
 
   .form-page__owner-tel-svg {
-    left: 514px;
-    top: 8px;
+    left: 535px;
+    top: 12px;
   }
 
   .form-page__comment {
@@ -818,11 +870,18 @@
 
   .form-page__comment textarea {
     width: 100%;
+    margin-bottom: 60px;
   }
 
   .form-page__add {
     padding-left: 110px;
     padding-right: 110px;
+    margin-bottom: 45px;
+  }
+
+  .form-page__add legend {
+    padding-bottom: 0;
+    margin-bottom: 55px;
   }
 
   .form-page__add legend::before {
@@ -834,10 +893,21 @@
     width: 1079px;
   }
 
+  .form-page__add label {
+    width: 250px;
+  }
+
+  .form-page__checkbox input[type="checkbox"] {
+    margin-right: 20px;
+    opacity: 0;
+  }
+
   .form-page__send {
     width: 570px;
     padding-top: 17px;
     padding-bottom: 17px;
+    margin-left: 110px;
+    display: inline-block;
 
     &:hover {
       background-color: #5eaa2f;
@@ -849,6 +919,14 @@
     }
   }
 
+  .form-page__sup {
+    display: inline-block;
+    margin-bottom: 90px;
+    margin-left: 80px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   .form-page__checkbox {
     position: relative;
     cursor: pointer;
@@ -857,11 +935,20 @@
 
   .form-page__checkbox input[type="checkbox"]:checked + .form-page__indicator {
     position: absolute;
+    background-size: 24px 24px;
 
     width: 40px;
     height: 40px;
 
     border: 2px solid @light-grey;
+
+    &:hover {
+      border: 2px solid #bababa;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
   }
 
   .form-page__checkbox input[type="checkbox"]:not(:checked) + .form-page__indicator {
@@ -876,13 +963,13 @@
     height: 40px;
 
     border: 2px solid @light-grey;
-  }
 
-  .form-page__checkbox input[type="checkbox"] {
-    opacity: 0;
-  }
+    &:hover {
+      border: 2px solid #bababa;
+    }
 
-  .form-page__add label {
-    width: 300px;
+    &:focus {
+      opacity: 0.3;
+    }
   }
 }

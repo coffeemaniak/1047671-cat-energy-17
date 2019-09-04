@@ -194,18 +194,41 @@
 @media (min-width: @desktop-width) {
   .card__name {
     font-size: 20px;
+
+    margin-top: 45px;
+    margin-bottom: 20px;
   }
 
   .card {
     width: 245px;
     margin-right: 40px;
     margin-left: 40px;
+    margin-bottom: 55px;
     padding: 0;
     text-align: center;
+
+    background-image: linear-gradient(to bottom, white 15%, @light-grey 15%);
+  }
+
+  .card-more {
+    margin-top: 80px;
+    width: 245px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 55px;
   }
 
   .card-more__text {
     text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 25px;
+    margin-bottom: 70px;
+  }
+
+  .card-more__icon {
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
 
   .card__description {
@@ -214,6 +237,7 @@
 
   .card__order {
     width: 170px;
+    padding-top: 10px;
 
     &:hover {
       background-color: #5eaa2f;
@@ -223,6 +247,10 @@
       background-color: #5eaa2f;
       opacity: 0.3;
     }
+  }
+
+  .card-more__to-all {
+    width: 170px;
   }
 
   .card-more__to-all:hover {
