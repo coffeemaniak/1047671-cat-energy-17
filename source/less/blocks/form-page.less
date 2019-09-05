@@ -86,6 +86,23 @@
 .form-page__cat-weight::placeholder,
 .form-page__cat-age::placeholder {
   font-size: 16px;
+  line-height: 30px;
+
+  color: #444444;
+  font-family: @main-font;
+  text-transform: uppercase;
+}
+
+input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  font-family: @main-font;
+  text-transform: uppercase;
+}
+
+textarea:-ms-input-placeholder {
+  font-size: 16px;
   line-height: 18px;
   color: #444444;
   font-family: @main-font;
@@ -388,7 +405,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.1 15.5' fill='%2368B738'><path d='M20.1 0L7.7 13.3 1 6.1 0 7.2l7.6 8.2.1.1L21 1.2l.1-.1z'/></svg>");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMS4xIDE1LjUiIGZpbGw9IiM4NmM1NjAiPjxwYXRoIGQ9Ik0yMC4xIDBMNy43IDEzLjMgMSA2LjEgMCA3LjJsNy42IDguMi4xLjFMMjEgMS4ybC4xLS4xeiIvPjwvc3ZnPg0K");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -604,6 +621,9 @@
   .form-page__owner-tel::placeholder {
     font-size: 20px;
     line-height: 20px;
+
+    padding-left: 5px;
+    padding-top: 5px;
   }
 
   .form-page__comment {
@@ -804,9 +824,8 @@
   }
 
   .form-page__about-owner {
-    display: flex;
-    justify-content: space-between;
-
+    // display: flex;
+    // justify-content: space-between;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -833,6 +852,7 @@
   .form-page__owner-email {
     width: 487px;
     margin-left: 20px;
+    padding-left: 5px;
   }
 
   .form-page__owner-email-svg {
@@ -847,12 +867,22 @@
     width: 470px;
     margin-left: 20px;
     margin-bottom: 55px;
+    padding-left: 5px;
   }
 
   .form-page__owner-tel-svg {
     left: 535px;
     top: 12px;
   }
+
+  // .form-page__owner-email::placeholder,
+  // .form-page__owner-tel::placeholder {
+  //   font-size: 20px;
+  //   line-height: 20px;
+    
+  //   padding-left: 5px;
+  //   padding-top: 10px;
+  // }
 
   .form-page__comment {
     padding-left: 110px;
