@@ -30,7 +30,7 @@
   padding-top: 20px;
 }
 
-.page-footer__copyright--link {
+.page-footer__link {
   font-family: @default-font;
   font-size: 16px;
   line-height: 16px;
@@ -41,7 +41,7 @@
   padding-bottom: 10px;
 }
 
-.page-footer__copyright--svg {
+.page-footer__svg {
   fill: #666666;
   width: 30px;
   margin-left: 100px;
@@ -65,7 +65,6 @@
   }
 
   .page-footer__name img {
-    width: 162px;
     margin: 0;
   }
 
@@ -82,14 +81,14 @@
     padding-top: 0;
   }
 
-  .page-footer__copyright--svg {
+  .page-footer__svg {
     width: 30px;
     height: 40px;
     margin-left: 12px;
     top: 15px;
   }
 
-  .page-footer__copyright--link {
+  .page-footer__link {
     padding-bottom: 0;
     position: relative;
     top: -22px;
@@ -100,11 +99,17 @@
   .page-footer {
     width: 1440px;
     padding-left: 110px;
-    padding-right: 110px;
+    padding-top: 75px;
   }
 
   .page-footer__name {
-    width: 245px;
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .page-footer__social {
@@ -113,5 +118,28 @@
 
   .page-footer__copyright {
     width: 245px;
+  }
+
+  .page-footer__link:active {
+    opacity: 0.6;
+  }
+
+  .page-footer__svg {
+    path {
+      fill: #666666;
+    }
+
+    &:hover {
+      path {
+        fill: @light-green;
+      }
+    }
+
+    &:active {
+      path {
+        fill: @light-green;
+        opacity: 0.6;
+      }
+    }
   }
 }

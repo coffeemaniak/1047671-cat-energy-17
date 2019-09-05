@@ -1661,7 +1661,7 @@ img {
     font-size: 20px;
     text-transform: uppercase;
   }
-  .card__description--row {
+  .card__row {
     width: 254px;
     padding-top: 8px;
     border-bottom: 1px solid #cdcdcd;

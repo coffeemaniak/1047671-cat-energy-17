@@ -40,14 +40,14 @@
   margin-bottom: 25px;
 }
 
-.card__more--title {
+.card-more__title {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.card__more--text {
+.card-more__text {
   font-size: 12px;
   line-height: 16px;
   font-family: @default-font;
@@ -55,7 +55,7 @@
   padding-bottom: 20px;
 }
 
-.card__to-all {
+.card-more__to-all {
   display: block;
   box-sizing: border-box;
   width: 280px;
@@ -73,7 +73,7 @@
   background-color: @light-grey;
 }
 
-.card__more--img {
+.card-more__icon {
   fill: #d3d3d3;
   display: block;
   margin: 0 auto;
@@ -103,7 +103,7 @@
     text-transform: uppercase;
   }
 
-  .card__description--row {
+  .card__row {
     width: 254px;
 
     padding-top: 8px;
@@ -150,14 +150,14 @@
     min-height: 205px;
   }
 
-  .card__more {
+  .card-more {
     background-image: none;
 
     margin-bottom: 46px;
     margin-top: 49px;
   }
 
-  .card__more--title {
+  .card-more__title {
     display: block;
     width: 138px;
     margin: 0 auto;
@@ -169,7 +169,7 @@
     text-transform: uppercase;
   }
 
-  .card__more--text {
+  .card-more__text {
     font-size: 16px;
     padding-left: 68px;
     padding-right: 68px;
@@ -178,13 +178,13 @@
     margin-bottom: 110px;
   }
 
-  .card__more--img {
+  .card-more__icon {
     padding-top: 56px;
     padding-bottom: 47px;
     width: 60px;
   }
 
-  .card__to-all {
+  .card-more__to-all {
     width: 250px;
     height: 44px;
     margin: 0 auto;
@@ -194,21 +194,41 @@
 @media (min-width: @desktop-width) {
   .card__name {
     font-size: 20px;
+
+    margin-top: 45px;
+    margin-bottom: 20px;
   }
 
   .card {
     width: 245px;
     margin-right: 40px;
     margin-left: 40px;
+    margin-bottom: 55px;
     padding: 0;
     text-align: center;
+
+    background-image: linear-gradient(to bottom, white 15%, @light-grey 15%);
   }
 
-  .card__text {
-    width: 175px;
-    padding-right: 35px;
-    padding-left: 35px;
+  .card-more {
+    margin-top: 80px;
+    width: 245px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 55px;
+  }
+
+  .card-more__text {
     text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 25px;
+    margin-bottom: 70px;
+  }
+
+  .card-more__icon {
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
 
   .card__description {
@@ -217,6 +237,7 @@
 
   .card__order {
     width: 170px;
+    padding-top: 10px;
 
     &:hover {
       background-color: #5eaa2f;
@@ -228,12 +249,20 @@
     }
   }
 
-  .card__to-all:hover {
+  .card-more__to-all {
+    width: 170px;
+  }
+
+  .card-more__to-all:hover {
     background-color: #ebebeb;
   }
 
-  .card__to-all:active {
+  .card-more__to-all:active {
     background-color: #ebebeb;
     opacity: 0.6;
+  }
+
+  .card__text {
+    width: auto;
   }
 }

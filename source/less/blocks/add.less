@@ -48,11 +48,11 @@
   font-size: 14px;
   line-height: 14px;
   font-family: @default-font;
+}
 
-  &--right {
-    text-align: right;
-    text-transform: uppercase;
-  }
+.add__right {
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .add__order {
@@ -93,7 +93,7 @@
   text-align: center;
 }
 
-.add__wrapper--img {
+.add__img {
   position: relative;
   left: 100px;
   top: 65px;
@@ -199,6 +199,7 @@
 
   .add__title {
     padding-left: 110px;
+    padding-top: 16px;
   }
 
   .add__title::before {
@@ -207,7 +208,8 @@
   }
 
   .add__title::after {
-    width: 963px;
+    width: 960px;
+    bottom: 16px;
   }
 
   .add__item {
@@ -215,7 +217,7 @@
 
     padding: 0;
     margin-left: 110px;
-    min-height: 73px;
+    min-height: 70px;
 
     border-left: none;
     border-right: none;
@@ -223,6 +225,7 @@
 
   .add__order {
     width: 245px;
+    padding-top: 10px;
 
     &:hover {
       background-color: #5eaa2f;
@@ -235,7 +238,13 @@
   }
 
   .add__description {
-    width: 285px;
+    width: 315px;
+    padding-bottom: 12px;
+    padding-top: 16px;
+  }
+
+  .add__right {
+    padding-right: 30px;
   }
 
   .add__name {
@@ -244,10 +253,11 @@
 
   .add__wrapper {
     width: 245px;
-    height: 292px;
+    height: 285px;
     margin-left: 0;
     margin-right: 110px;
     margin-top: 0;
+    margin-bottom: 0;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
@@ -266,8 +276,15 @@
   }
 
   .add__text {
-    margin-left: 0;
-    margin-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: 5px;
     text-align: center;
+  }
+
+  .add__img {
+    left: 92px;
+    top: 62px;
+    width: 60px;
+    height: 60px;
   }
 }
